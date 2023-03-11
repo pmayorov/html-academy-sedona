@@ -40,11 +40,55 @@
       <div class="">HERO-блок</div>
     </header>
 
-    <!-- Секция с преимуществами -->
+    <!-- Секция формы с отзывом -->
     <section class="">
       <h2 class="">Оставьте свой отзыв</h2>
       <p class="">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <form class="" action="https://echo.htmlacademy.ru" name="review-form" method="post">
+        <!-- ФИО -->
+        <fieldset class="">
+          <legend class="">Представьтесь:</legend>
+          <label class="">Имя*:</label><input class="" type="text" name="name">
+          <label class="">Фамилия*:</label><input class="" type="text" name="surname">
+          <label class="">Отчество:</label><input class="" type="text" name="patronymic">
+        </fieldset>
+
+        <!-- Контакты -->
+        <fieldset class="">
+          <legend class="">Контактная информация:</legend>
+          <label class="">Контактный телефон*:</label><input class="" type="tel" name="phone">
+          <label class="">Электронная почта*:</label><input class="" type="email" name="email">
+        </fieldset>
+
+        <!-- Впечатление -->
+        <fieldset class="">
+          <legend class="">Ваше общее впечатление:</legend>
+          <label class=""><input class="" type="radio" name="impress" value="positive">Скорее положительное</label>
+          <label class=""><input class="" type="radio" name="impress" value="negative">Скорее отрицательное</label>
+          <label class=""><input class="" type="radio" name="impress" value="no-answer">Затрудняюсь ответить</label>
+        </fieldset>
+
+        <!-- Достопримечательности -->
+        <fieldset class="">
+          <legend class="">Посещенные достопримечательности:</legend>
+          <label class=""><input class="" type="checkbox" name="sights" value="devil-bridge">Мост Дьявола</label>
+          <label class=""><input class="" type="checkbox" name="sights" value="mount-bell">Гора-Колокол</label>
+          <label class=""><input class="" type="checkbox" name="sights" value="slide-park">Слайд-парк</label>
+          <label class=""><input class="" type="checkbox" name="sights" value="red-rocks">Красные скалы</label>
+        </fieldset>
+
+        <!-- Эмоции-->
+        <fieldset class="">
+          <legend class="">Опишите свои эмоции:</legend>
+          <label class="visually-hidden" for="comments">Поле для ввода комментариев</label>
+          <textarea class="" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+        </fieldset>
+
+        <button class="" type="submit">Отправить отзыв</button>
+
+      </form>
     </section>
+
   </main>
 
   <!-- FORM - FOOTER -->
