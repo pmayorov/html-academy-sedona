@@ -7,9 +7,17 @@
   <title>Седона – форма отзыва </title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="./img/favicons/favicon.svg">
-  <!-- Визуализация разметки -->
+
+  <!-- DEV - Визуализация разметки -->
   <!-- <link rel="stylesheet" href="./css/outline.css"> -->
   <link rel="stylesheet" href="./css/markup.css">
+  <!-- <link rel="stylesheet" href="./css/pixel-index.css">
+  <link href="./pixelglass/styles.css" rel="stylesheet">
+  <script src="./pixelglass/script.js"></script> -->
+  <!-- DEV - END -->
+
+  <!-- Подключение стилей проекта -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="">
@@ -38,6 +46,7 @@
     <!-- Промо блок -->
     <header class="">
       <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
+      <h2 class="visually-hidden">Мы круче, чем Гранд Каньон!</h2>
       <div class="">HERO-блок</div>
     </header>
 
@@ -48,51 +57,66 @@
       <form class="" action="https://echo.htmlacademy.ru" name="review-form" method="post">
         <!-- ФИО -->
         <fieldset class="">
-          <legend class="">Представьтесь:</legend>
-          <label class=""><span class="">Имя*:</span><input class="" type="text" name="name" required></label>
-          <label class=""><span class="">Фамилия*:</span><input class="" type="text" name="surname" required></label>
-          <label class=""><span class="">Отчество:</span><input class="" type="text" name="patronymic"></label>
+          <legend class="">
+            <h3>Представьтесь:</h3>
+          </legend>
+          <ul class="" role="none">
+            <li class=""><label class="">Имя*:</label><input class="" type="text" name="name" required></li>
+            <li class=""><label class="">Фамилия*:</label><input class="" type="text" name="surname" required></li>
+            <li class=""><label class="">Отчество:</label><input class="" type="text" name="patronymic"></li>
+          </ul>
         </fieldset>
 
         <!-- Контакты -->
         <fieldset class="">
-          <legend class="">Контактная информация:</legend>
-          <label class=""><span class="">Контактный телефон*:</span><input class="" type="tel" name="phone" required></label>
-          <label class=""><span class="">Электронная почта*:</span><input class="" type="email" name="email" required></label>
+          <legend class="">
+            <h3>Контактная информация:</h3>
+          </legend>
+          <ul class="" role="none">
+            <li class=""><label class="">Контактный телефон*:</label><input class="" type="tel" name="phone" required></li>
+            <li class=""><label class="">Электронная почта*:</label><input class="" type="email" name="email" required></li>
+          </ul>
         </fieldset>
 
         <!-- Впечатление -->
         <fieldset class="">
-          <legend class="">Ваше общее впечатление:</legend>
-          <label class=""><input class="" type="radio" name="impress" value="positive"><span class="">Скорее положительное</span></label>
-          <label class=""><input class="" type="radio" name="impress" value="negative"><span class="">Скорее отрицательное</span></label>
-          <label class=""><input class="" type="radio" name="impress" value="no-answer"><span class="">Затрудняюсь ответить</span></label>
+          <legend class="">
+            <h3>Ваше общее впечатление:</h3>
+          </legend>
+          <ul class="" role="none">
+            <li class=""><input class="" type="radio" name="impress" value="positive"><label class="">Скорее положительное</label></li>
+            <li class=""><input class="" type="radio" name="impress" value="negative"><label class="">Скорее отрицательное</label></li>
+            <li class=""><input class="" type="radio" name="impress" value="no-answer"><label class="">Затрудняюсь ответить</label></li>
+          </ul>
         </fieldset>
 
         <!-- Достопримечательности -->
         <fieldset class="">
-          <legend class="">Посещенные достопримечательности:</legend>
-          <label class=""><input class="" type="checkbox" name="sights" value="devil-bridge"><span class="">Мост Дьявола</span></label>
-          <label class=""><input class="" type="checkbox" name="sights" value="mount-bell"><span class="">Гора-Колокол</span></label>
-          <label class=""><input class="" type="checkbox" name="sights" value="slide-park"><span class="">Слайд-парк</span></label>
-          <label class=""><input class="" type="checkbox" name="sights" value="red-rocks"><span class="">Красные скалы</span></label>
+          <legend class="">
+            <h3>Посещенные достопримечательности:</h3>
+          </legend>
+          <ul class="" role="none">
+            <li class=""><input class="" type="checkbox" name="sights" value="devil-bridge"><label class="">Мост Дьявола</label></li>
+            <li class=""><input class="" type="checkbox" name="sights" value="mount-bell"><label class="">Гора-Колокол</label></li>
+            <li class=""><input class="" type="checkbox" name="sights" value="slide-park"><label class="">Слайд-парк</label></li>
+            <li class=""><input class="" type="checkbox" name="sights" value="red-rocks"><label class="">Красные скалы</label></li>
+          </ul>
         </fieldset>
 
         <!-- Эмоции-->
-        <fieldset class="">
-          <legend class="">Опишите свои эмоции:</legend>
-          <label class="visually-hidden" for="comments">Текст отзыва</label>
+        <div class="">
+          <label class="">
+            <h3>Опишите свои эмоции:</h3>
+          </label>
           <textarea class="" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
-        </fieldset>
+        </div>
 
         <p class="">
           <button class="" type="submit">Отправить отзыв</button>
           <span>* — обязательные поля</span>
         </p>
-
       </form>
     </section>
-
   </main>
 
   <!-- FORM - FOOTER -->

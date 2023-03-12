@@ -1,2 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+@font-face {
+  font-display: swap;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-v17-cyrillic-regular.woff2") format("woff2"), url("../fonts/pt-sans-v17-cyrillic-regular.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-v17-cyrillic-700.woff2") format("woff2"), url("../fonts/pt-sans-v17-cyrillic-700.woff") format("woff");
+}
+.page {
+  min-width: 320px;
+  height: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+}
+
+.page__body {
+  margin: 0;
+}
 /*# sourceMappingURL=style.css.map */

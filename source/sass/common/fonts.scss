@@ -2,20 +2,20 @@
 
 @font-face {
   font-display: swap;
-  font-family: "Oswald";
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   src:
-    url("../fonts/oswaldregular.woff2") format("woff2"),
-    url("../fonts/oswaldregular.woff") format("woff");
+    url("../fonts/pt-sans-v17-cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/pt-sans-v17-cyrillic-regular.woff") format("woff");
 }
 
 @font-face {
   font-display: swap;
-  font-family: "Oswald";
+  font-family: "PT Sans";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   src:
-    url("../fonts/oswaldmedium.woff2") format("woff2"),
-    url("../fonts/oswaldmedium.woff") format("woff");
+    url("../fonts/pt-sans-v17-cyrillic-700.woff2") format("woff2"),
+    url("../fonts/pt-sans-v17-cyrillic-700.woff") format("woff");
 }

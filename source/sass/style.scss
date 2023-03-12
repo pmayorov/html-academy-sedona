@@ -1,0 +1,12 @@
+/// Общие
+@import "./common/global.scss";
+
+/// Шрифты. Переменные
+@import "./common/fonts.scss";
+@import "./common/variables.scss";
+
+///Миксины
+@import "./common/mixins.scss";
+
+/// Блоки
+@import "./blocks/page.scss";

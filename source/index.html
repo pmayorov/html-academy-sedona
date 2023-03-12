@@ -7,43 +7,52 @@
   <title>Добро пожаловать в Седону!</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="./img/favicons/favicon.svg">
-  <!-- Визуализация разметки -->
+
+  <!-- DEV - Визуализация разметки -->
   <!-- <link rel="stylesheet" href="./css/outline.css"> -->
   <link rel="stylesheet" href="./css/markup.css">
+  <!-- <link rel="stylesheet" href="./css/pixel-index.css">
+  <link href="./pixelglass/styles.css" rel="stylesheet">
+  <script src="./pixelglass/script.js"></script> -->
+  <!-- DEV - END -->
+
+  <!-- Подключение стилей проекта -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="">
+<body class="page__body body">
 
   <!-- INDEX - HEADER -->
 
-  <header class="">
+  <header class="page__header">
     <!-- Навигация -->
-    <nav class="">
+    <nav class="nav">
       <!-- Логотип -->
-      <a class=""><img width="102" height="84" class="" src="./img/logos/sedona-small.svg" alt="Логотип города Седона"></a>
-      <button class="" type="button"><span class="visually-hidden">Главное меню</span></button>
+      <a class="nav__logo logo"><img width="102" height="84" class="" src="./img/logos/sedona-small.svg" alt="Логотип города Седона"></a>
+      <button class="nav__button button" type="button"><span class="visually-hidden">Главное меню</span></button>
       <!-- Главное меню -->
-      <ul class="">
-        <li class=""><a class="">Главная</a></li>
-        <li class=""><a class="" href="./catalog.html">Фото и видео</a></li>
-        <li class=""><a class="" href="./form.html">Форма отзыва</a></li>
-        <li class=""><a class="" href="#">html academy</a></li>
+      <ul class="nav__list site-menu">
+        <li class="nav__item"><a class="nav__link">Главная</a></li>
+        <li class="nav__item"><a class="nav__link" href="./catalog.html">Фото и видео</a></li>
+        <li class="nav__item"><a class="nav__link" href="./form.html">Форма отзыва</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">html academy</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- INDEX - MAIN -->
-  <main class="">
+  <main class="main">
 
     <!-- Промо блок -->
     <header class="">
       <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
+      <h2 class="visually-hidden">Мы круче, чем Гранд Каньон!</h2>
       <div class="">HERO-блок</div>
     </header>
 
     <!-- Секция с преимуществами -->
     <section class="">
-      <h2 class="visually-hidden">Преимущества Седоны</h2>
+      <h2 class="visually-hidden">Наши преимущества</h2>
       <b class="">Седона – небольшой городок в Аризоне, заслуживающий большего!</b>
       <p class="">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 
@@ -53,7 +62,7 @@
         <li class="">
           <h3 class="">Настоящий городок</h3>
           <p class="">Седона не аттракцион для туристов, там течет своя жизнь</p>
-          <img class="" width="520" height="260" src="./img/catalog/index-city.jpg" alt="Городской отель, на заднем фоне которого виднеются горы">
+          <img class="" width="320" height="260" src="./img/catalog/index-city.jpg" alt="Городской отель, на заднем фоне которого виднеются горы">
 
           <!-- Список городских бонусов -->
           <ul class="">
@@ -76,7 +85,7 @@
         <li class="">
           <h3 class="">Там есть мост дьявола</h3>
           <p class="">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-          <img class="" width="520" height="260" src="./img/catalog/index-bridge.jpg" alt="Скалистые горы красного цвета и на переднем плане каньон с растущими в нем деревьями">
+          <img class="" width="320" height="260" src="./img/catalog/index-bridge.jpg" alt="Скалистые горы красного цвета и на переднем плане каньон с растущими в нем деревьями">
         </li>
 
         <!-- #3 -->
@@ -108,12 +117,13 @@
     </section>
     <!-- Карта Аризоны -->
     <footer class="">
+      <h2 class="visually-hidden">Найдите нас на карте</h2>
       <img class="" width="320" height="350" src="./img/index/map-mobile.jpg" alt="Карта как найти город">
     </footer>
   </main>
 
   <!-- INDEX - FOOTER -->
-  <footer class="">
+  <footer class="footer">
     <div class="">
       <a class="" href="#">#Visitsedona</a>
       <ul class="">
