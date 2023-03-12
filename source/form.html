@@ -21,6 +21,7 @@
     <nav class="">
       <!-- Логотип -->
       <a class=""><img width="102" height="84" class="" src="./img/logos/sedona-small.svg" alt="Логотип города Седона"></a>
+      <button class="" type="button"><span class="visually-hidden">Главное меню</span></button>
       <!-- Главное меню -->
       <ul class="">
         <li class=""><a class="" href="./index.html">Главная</a></li>
@@ -48,43 +49,46 @@
         <!-- ФИО -->
         <fieldset class="">
           <legend class="">Представьтесь:</legend>
-          <label class="">Имя*:</label><input class="" type="text" name="name">
-          <label class="">Фамилия*:</label><input class="" type="text" name="surname">
-          <label class="">Отчество:</label><input class="" type="text" name="patronymic">
+          <label class=""><span class="">Имя*:</span><input class="" type="text" name="name" required></label>
+          <label class=""><span class="">Фамилия*:</span><input class="" type="text" name="surname" required></label>
+          <label class=""><span class="">Отчество:</span><input class="" type="text" name="patronymic"></label>
         </fieldset>
 
         <!-- Контакты -->
         <fieldset class="">
           <legend class="">Контактная информация:</legend>
-          <label class="">Контактный телефон*:</label><input class="" type="tel" name="phone">
-          <label class="">Электронная почта*:</label><input class="" type="email" name="email">
+          <label class=""><span class="">Контактный телефон*:</span><input class="" type="tel" name="phone" required></label>
+          <label class=""><span class="">Электронная почта*:</span><input class="" type="email" name="email" required></label>
         </fieldset>
 
         <!-- Впечатление -->
         <fieldset class="">
           <legend class="">Ваше общее впечатление:</legend>
-          <label class=""><input class="" type="radio" name="impress" value="positive">Скорее положительное</label>
-          <label class=""><input class="" type="radio" name="impress" value="negative">Скорее отрицательное</label>
-          <label class=""><input class="" type="radio" name="impress" value="no-answer">Затрудняюсь ответить</label>
+          <label class=""><input class="" type="radio" name="impress" value="positive"><span class="">Скорее положительное</span></label>
+          <label class=""><input class="" type="radio" name="impress" value="negative"><span class="">Скорее отрицательное</span></label>
+          <label class=""><input class="" type="radio" name="impress" value="no-answer"><span class="">Затрудняюсь ответить</span></label>
         </fieldset>
 
         <!-- Достопримечательности -->
         <fieldset class="">
           <legend class="">Посещенные достопримечательности:</legend>
-          <label class=""><input class="" type="checkbox" name="sights" value="devil-bridge">Мост Дьявола</label>
-          <label class=""><input class="" type="checkbox" name="sights" value="mount-bell">Гора-Колокол</label>
-          <label class=""><input class="" type="checkbox" name="sights" value="slide-park">Слайд-парк</label>
-          <label class=""><input class="" type="checkbox" name="sights" value="red-rocks">Красные скалы</label>
+          <label class=""><input class="" type="checkbox" name="sights" value="devil-bridge"><span class="">Мост Дьявола</span></label>
+          <label class=""><input class="" type="checkbox" name="sights" value="mount-bell"><span class="">Гора-Колокол</span></label>
+          <label class=""><input class="" type="checkbox" name="sights" value="slide-park"><span class="">Слайд-парк</span></label>
+          <label class=""><input class="" type="checkbox" name="sights" value="red-rocks"><span class="">Красные скалы</span></label>
         </fieldset>
 
         <!-- Эмоции-->
         <fieldset class="">
           <legend class="">Опишите свои эмоции:</legend>
-          <label class="visually-hidden" for="comments">Поле для ввода комментариев</label>
+          <label class="visually-hidden" for="comments">Текст отзыва</label>
           <textarea class="" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
-        <button class="" type="submit">Отправить отзыв</button>
+        <p class="">
+          <button class="" type="submit">Отправить отзыв</button>
+          <span>* — обязательные поля</span>
+        </p>
 
       </form>
     </section>
