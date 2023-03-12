@@ -1,0 +1,40 @@
+/// Брекпоинты
+$width-mobile: 320px;
+$width-tablet: 768px;
+$width-desktop: 1280px;
+
+// /// Отступы от края вьюпорта
+// $width-mobile-padding: 20px;
+// $width-tablet-padding: 30px;
+// $width-tablet-padding-inner: 40px;
+// $width-desktop-padding: 110px;
+
+// /// Ширины контентных контейнеров
+// $width-mobile-content: (
+//   $width-mobile - 2 * $width-mobile-padding
+// );
+// $width-tablet-content: (
+//   $width-tablet - 2 * $width-tablet-padding
+// );
+// $width-desktop-content: (
+//   $width-desktop - 2 * $width-desktop-padding
+// );
+// /// Ширина при которой УЖЕ отключаться некоторые классы
+// $width-max-mobile: (
+//   $width-tablet - 1
+// );
+// /// Ширина при которой УЖЕ можно включать десктопную раскладку (т.к. боковые паддинги довольно широкие)
+// $width-pre-desktop: (
+//   $width-desktop-content + 100px
+// );
+
+
+/// Шрифты
+$font-title: "PT Sans", "Arial", sans-serif;
+$font-body: "PT Sans", "Arial", sans-serif;
+
+/// Цвета
+$color-black: #000000;
+$color-white: #ffffff;
+
+$status-error: #ff5d5d;

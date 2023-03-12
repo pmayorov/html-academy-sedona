@@ -2,15 +2,22 @@
 *::before,
 *::after {
   box-sizing: border-box;
-
-  //todo Тестовая обводка
-  // outline: (1px solid magenta);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+// body > * {
+//   outline: 1px solid palevioletred;
+// }
+
+// body > * > * {
+//   outline: 1px dotted slateblue;
+//   outline-offset: -2px;
+// }
+
+// body > * > * > * {
+//   outline: 1px dotted limegreen;
+//   outline-offset: -4px;
+// }
+
 
 // Disable arrows from input[type="number"]
 
