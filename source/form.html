@@ -10,7 +10,7 @@
 
   <!-- DEV - Визуализация разметки -->
   <!-- <link rel="stylesheet" href="./css/outline.css"> -->
-  <link rel="stylesheet" href="./css/markup.css">
+  <!-- <link rel="stylesheet" href="./css/markup.css"> -->
   <!-- <link rel="stylesheet" href="./css/pixel-index.css">
   <link href="./pixelglass/styles.css" rel="stylesheet">
   <script src="./pixelglass/script.js"></script> -->
@@ -52,15 +52,19 @@
 
     <!-- Секция формы с отзывом -->
     <section class="">
-      <h2 class="">Оставьте свой отзыв</h2>
-      <p class="">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <div class="container">
+        <h2 class="">Оставьте свой отзыв</h2>
+        <p class="">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </div>
+
+      <!-- Форма отзыва -->
       <form class="" action="https://echo.htmlacademy.ru" name="review-form" method="post">
         <!-- ФИО -->
         <fieldset class="">
           <legend class="">
-            <h3>Представьтесь:</h3>
+            <h3 class="container">Представьтесь:</h3>
           </legend>
-          <ul class="" role="none">
+          <ul class="container" role="none">
             <li class=""><label class="">Имя*:</label><input class="" type="text" name="name" required></li>
             <li class=""><label class="">Фамилия*:</label><input class="" type="text" name="surname" required></li>
             <li class=""><label class="">Отчество:</label><input class="" type="text" name="patronymic"></li>
@@ -70,9 +74,9 @@
         <!-- Контакты -->
         <fieldset class="">
           <legend class="">
-            <h3>Контактная информация:</h3>
+            <h3 class="container">Контактная информация:</h3>
           </legend>
-          <ul class="" role="none">
+          <ul class="container" role="none">
             <li class=""><label class="">Контактный телефон*:</label><input class="" type="tel" name="phone" required></li>
             <li class=""><label class="">Электронная почта*:</label><input class="" type="email" name="email" required></li>
           </ul>
@@ -81,9 +85,9 @@
         <!-- Впечатление -->
         <fieldset class="">
           <legend class="">
-            <h3>Ваше общее впечатление:</h3>
+            <h3 class="container">Ваше общее впечатление:</h3>
           </legend>
-          <ul class="" role="none">
+          <ul class="container" role="none">
             <li class=""><input class="" type="radio" name="impress" value="positive"><label class="">Скорее положительное</label></li>
             <li class=""><input class="" type="radio" name="impress" value="negative"><label class="">Скорее отрицательное</label></li>
             <li class=""><input class="" type="radio" name="impress" value="no-answer"><label class="">Затрудняюсь ответить</label></li>
@@ -93,9 +97,9 @@
         <!-- Достопримечательности -->
         <fieldset class="">
           <legend class="">
-            <h3>Посещенные достопримечательности:</h3>
+            <h3 class="container">Посещенные достопримечательности:</h3>
           </legend>
-          <ul class="" role="none">
+          <ul class="container" role="none">
             <li class=""><input class="" type="checkbox" name="sights" value="devil-bridge"><label class="">Мост Дьявола</label></li>
             <li class=""><input class="" type="checkbox" name="sights" value="mount-bell"><label class="">Гора-Колокол</label></li>
             <li class=""><input class="" type="checkbox" name="sights" value="slide-park"><label class="">Слайд-парк</label></li>
@@ -106,9 +110,9 @@
         <!-- Эмоции-->
         <div class="">
           <label class="">
-            <h3>Опишите свои эмоции:</h3>
+            <h3 class="container">Опишите свои эмоции:</h3>
           </label>
-          <textarea class="" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+          <textarea class="container" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
         </div>
 
         <p class="">
@@ -119,21 +123,24 @@
     </section>
   </main>
 
-  <!-- FORM - FOOTER -->
-  <footer class="">
-    <div class="">
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <!-- Хештег Седоны-->
       <a class="" href="#">#Visitsedona</a>
+      <!-- Меню соцсетей -->
       <ul class="">
         <li class=""><a href="#">Twitter</a></li>
         <li class=""><a href="#">Facebook</a></li>
         <li class=""><a href="#">YouTube</a></li>
       </ul>
-      <a class="" href="#">Разработано<svg class="" width="27" height="34" role="img" aria-hidden="true">
+      <!-- Логотип академии -->
+      <a class="" href="#">Разработано
+        <svg class="" width="27" height="34" role="img" aria-hidden="true">
           <use xlink:href="./img/icons/sprite.svg#html-academy"></use>
         </svg></a>
     </div>
   </footer>
-
 </body>
 
 </html>

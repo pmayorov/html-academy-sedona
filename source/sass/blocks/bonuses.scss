@@ -1,0 +1,27 @@
+.bonuses {
+  width: 100%;
+  background-color: $color-white;
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1 / -1;
+  }
+}
+
+.bonuses__list {
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+
+.bonuses__item {
+  padding: 0 32px;
+}
+
+// .bonuses__title {}
+
+// .bonuses__desc {}
