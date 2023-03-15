@@ -24,22 +24,26 @@
 
   <!-- INDEX - HEADER -->
   <header class="page__header header">
-    <div class="container">
-      <a class="nav__logo logo"><img class="logo__image" width="102" height="84" src="./img/logos/sedona-small.svg" alt="Логотип города Седона"></a>
-      <!-- Навигация -->
-      <!-- <nav class="nav container"> -->
-      <nav class="nav">
-        <!-- Логотип -->
-        <button class="nav__button button" type="button"><span class="visually-hidden">Главное меню</span></button>
-        <!-- Главное меню -->
-        <ul class="nav__list site-menu">
-          <li class="nav__item"><a class="site-menu__link">Главная</a></li>
-          <li class="nav__item"><a class="site-menu__link" href="./catalog.html">Фото и видео</a></li>
-          <li class="nav__item"><a class="site-menu__link" href="./form.html">Форма отзыва</a></li>
-          <li class="nav__item"><a class="site-menu__link" href="#">html academy</a></li>
-        </ul>
-      </nav>
-    </div>
+
+    <!-- Логотип -->
+    <a class="header__logo header__logo--nojs logo">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="./img/logos/sedona-big.svg">
+        <img class="logo__image" width="102" height="84" src="./img/logos/sedona-small.svg" alt="Логотип города Седона">
+      </picture>
+    </a>
+    <!-- Главное меню -->
+    <nav class="nav">
+      <button class="nav__button nav-button nav-button--nojs" type="button"><span class="visually-hidden">Главное меню</span></button>
+      <!-- <ul class="nav__list site-menu site-menu--closed"> -->
+      <ul class="site-menu site-menu--nojs">
+        <!-- <ul class="nav__list site-menu"> -->
+        <li class="site-menu__item"><a class="site-menu__link">Главная</a></li>
+        <li class="site-menu__item"><a class="site-menu__link" href="./catalog.html">Фото и видео</a></li>
+        <li class="site-menu__item"><a class="site-menu__link" href="./form.html">Форма отзыва</a></li>
+        <li class="site-menu__item"><a class="site-menu__link" href="#">html academy</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- INDEX - MAIN -->
@@ -48,7 +52,7 @@
     <!-- ПРОМО БЛОК -->
     <header class="hero">
       <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
-      <b class="visually-hidden">Мы круче, чем Гранд Каньон!</b>
+      <p class="visually-hidden"><b>Мы круче, чем Гранд Каньон!</b></p>
     </header>
 
     <!-- ПРЕИМУЩЕСТВА -->
@@ -56,7 +60,7 @@
 
       <div class="container">
         <h2 class="visually-hidden">Наши преимущества</h2>
-        <b class="advantages__heading title">Седона – небольшой городок в Аризоне, заслуживающий большего!</b>
+        <p class="advantages__heading title">Седона – небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="advantages__lead">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
 
@@ -129,11 +133,9 @@
     <!-- ПОИСК ОТЕЛЕЙ -->
     <section class="hotel-search container">
       <h2 class="visually-hidden">Поиск гостиницы</h2>
-      <div class="container">
-        <b class="hotel-search__heading title">Заинтересовались?</b>
-        <p class="hotel-search__lead">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="hotel-search__link button" href="#">Найти гостиницу</a>
-      </div>
+      <p class="hotel-search__heading title">Заинтересовались?</p>
+      <p class="hotel-search__lead">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <a class="hotel-search__link hotel-search__button button" href="#">Найти гостиницу</a>
     </section>
 
     <!-- КАРТА АРИЗОНЫ -->
@@ -145,24 +147,22 @@
 
   <!-- INDEX - FOOTER -->
   <footer class="page__footer footer">
-    <div class="container">
-      <!-- Хештег Седоны-->
-      <a class="footer__hashtag" href="#">#Visitsedona</a>
-      <!-- Меню соцсетей -->
-      <ul class="footer__list social">
-        <li class="footer__item"><a class="social__link social__link--twitter" href="#">Twitter</a></li>
-        <li class="footer__item"><a class="social__link social__link--facebook" href="#">Facebook</a></li>
-        <li class="footer__item"><a class="social__link social__link--youtube" href="#">YouTube</a></li>
-      </ul>
-      <!-- Логотип академии -->
-      <a class="footer__copyright html-academy" href="#">Разработано
-        <svg class="html-academy__logo" width="27" height="34" role="img" aria-hidden="true">
-          <use xlink:href="./img/icons/sprite.svg#html-academy"></use>
-        </svg>
-      </a>
-    </div>
+    <!-- Хештег Седоны-->
+    <a class="footer__hashtag title" href="#">#Visitsedona</a>
+    <!-- Меню соцсетей -->
+    <ul class="footer__list socials">
+      <li class="footer__item"><a class="socials__link social__link--twitter" href="#">Twitter</a></li>
+      <li class="footer__item"><a class="socials__link social__link--facebook" href="#">Facebook</a></li>
+      <li class="footer__item"><a class="socials__link social__link--youtube" href="#">YouTube</a></li>
+    </ul>
+    <!-- Логотип академии -->
+    <a class="footer__copyright html-academy" href="#">Разработано
+      <svg class="html-academy__logo" width="27" height="34" role="img" aria-hidden="true">
+        <use xlink:href="./img/icons/sprite.svg#html-academy"></use>
+      </svg>
+    </a>
   </footer>
-
+  <script src="./js/site-menu.js"></script>
 </body>
 
 </html>
