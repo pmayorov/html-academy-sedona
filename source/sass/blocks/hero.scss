@@ -1,0 +1,24 @@
+.hero {
+  width: 100%;
+  // background-color: $seagul-basic;
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+
+  @media (max-width: $width-max-mobile) {
+    background-image: url("../../img/index/hero-mobile.jpg");
+    height: 389px;
+  }
+
+  @media (min-width: $width-tablet) {
+    background-image: url("../../img/index/hero-mobile.jpg");
+    height: 518px;
+  }
+
+  @media (min-width: $width-tablet) {
+    background-image: url("../../img/index/hero-mobile.jpg");
+  }
+
+
+}

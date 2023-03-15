@@ -1,9 +1,20 @@
 .hotel-search {
+  padding: 34px 0 49px;
   text-align: center;
 }
 
 .hotel-search__heading {
-  display: block;
+  margin: 0 0 19px;
 }
 
-// .hotel-search__lead {}
+.hotel-search__lead {
+  margin: 0;
+}
+
+.hotel-search__button {
+  display: block;
+  max-width: 458px;
+  margin: 27px auto 0;
+  padding: 16px;
+  text-decoration: none;
+}

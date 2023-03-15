@@ -20,7 +20,7 @@
 
 .container {
   @include outline();
-  width: calc(100vw - 36px);
+  width: calc(100vw - 2 * $width-mobile-padding);
   max-width: $width-desktop-content;
   margin-left: auto;
   margin-right: auto;

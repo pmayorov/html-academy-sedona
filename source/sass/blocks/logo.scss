@@ -1,0 +1,10 @@
+// .logo {}
+
+.logo__image {
+  display: block;
+
+  @media (min-width: $width-desktop) {
+    width: 186px;
+    height: auto;
+  }
+}

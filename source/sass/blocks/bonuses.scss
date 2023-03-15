@@ -1,27 +1,47 @@
 .bonuses {
   width: 100%;
   background-color: $color-white;
+  text-align: left;
+
+  @media (max-width: $width-tablet) {
+
+  }
 
   @media (min-width: $width-tablet) {
     grid-column: 1 / -1;
+    text-align: center;
   }
 }
 
 .bonuses__list {
+  display: grid;
   padding: 0;
   list-style-type: none;
 
+  @media (max-width: $width-tablet) {
+    row-gap: 26px;
+  }
+
   @media (min-width: $width-tablet) {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
   }
 }
 
 .bonuses__item {
-  padding: 0 32px;
+  // DEV - START!
+  @include outline(1px, dotted, mediumslateblue);
+  // DEV - END!
+  @media (max-width: $width-max-mobile) {
+    margin-left: 52px;
+  }
 }
 
-// .bonuses__title {}
+.bonuses__title {
+  margin: 0 0 15px;
+}
 
-// .bonuses__desc {}
+.bonuses__desc {
+  margin: 0;
+  color: $color-gray-33;
+}

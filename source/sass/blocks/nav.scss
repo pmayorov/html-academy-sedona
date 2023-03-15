@@ -1,0 +1,28 @@
+.nav {
+  position: relative;
+  // Задаем min-height, чтобы блок навигации не уменьшался,
+  // когда дочерний button становится position: abolute;
+  min-height: 56px;
+  padding: 17px 0;
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+  }
+}
+
+.nav__button {
+  margin-left: auto;
+  margin-right: $width-mobile-padding;
+
+  // &--active {
+  //   position: absolute;
+  //   top: 17px;
+  //   right: 0;
+  //   z-index: 1;
+  // }
+}
+
+.nav__list {
+  display: grid;
+
+}

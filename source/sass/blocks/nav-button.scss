@@ -1,0 +1,26 @@
+.nav-button {
+  display: block;
+  width: 23px;
+  height: 22px;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $width-tablet) {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--active {
+    position: absolute;
+    top: 17px;
+    right: 0;
+    z-index: 1;
+  }
+
+  &--nojs {
+    display: none;
+  }
+}

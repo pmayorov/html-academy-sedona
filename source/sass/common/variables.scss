@@ -4,7 +4,7 @@ $width-tablet: 768px;
 $width-desktop: 1280px;
 
 /// Отступы от края вьюпорта
-$width-mobile-padding: 18px;
+$width-mobile-padding: 20px;
 $width-tablet-padding: 0;
 $width-desktop-padding: 40px;
 
@@ -23,7 +23,7 @@ $width-desktop-content: (
 );
 
 /// Ширина при которой УЖЕ отключаться некоторые классы в мобильной версии
-$width-mobile-max: (
+$width-max-mobile: (
   $width-tablet - 1
 );
 
@@ -40,21 +40,24 @@ $font-body: "PT Sans", "Arial", sans-serif;
 /// Цвета
 $color-black: #000000;
 $color-white: #ffffff;
-$color-primary: #81b3d2;
+$seagul-basic: #81b3d2;
+$color-gray-f2: #f2f2f2;
+$color-gray-d6: #d6d6d6;
+$color-gray-ee: #eeeeee;
+$color-gray-ea: #eaeaea;
+$color-gray-e5: #e5e5e5;
+$color-gray-ba: #bababa;
+$color-gray-33: #333333;
+
 // Оттенки серого
-$color-gray-005: #f2f2f2;
-$color-gray-007: #eeeeee;
 // $color-gray-008: #ebebeb;
-$color-gray-008: #eaeaea;
-$color-gray-010: #e5e5e5;
 // $color-gray-010: #e6e6e6;
 // $color-gray-014: #dbdbdb;
 // $color-gray-015: #d9d9d9;
 // $color-gray-020: #cccccc;
-// $color-gray-027: #bababa;
 // $color-gray-060: #666666;
 // $color-gray-073: #454545;
-$color-gray-080: #333333;
+// $color-gray-080: #333333;
 // $color-gray-087: #212121;
 // $color-gray-093: #121212;
 
