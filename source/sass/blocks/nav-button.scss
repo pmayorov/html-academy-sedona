@@ -1,0 +1,28 @@
+.nav-button {
+  display: block;
+  width: 23px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  background: url("../../img/icons/icon-menu.svg");
+
+  @media (min-width: $width-tablet) {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--active {
+    position: absolute;
+    top: 17px;
+    right: 0;
+    background: url("../../img/icons/icon-cross.svg");
+    z-index: 2;
+  }
+
+  &--nojs {
+    display: none;
+  }
+}

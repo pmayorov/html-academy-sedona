@@ -1,0 +1,25 @@
+// Ссылка и логотип академии
+.html-academy {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 15px;
+  line-height: 26px;
+  text-decoration: none;
+  word-break: break-word;
+  color: $color-black;
+}
+
+.html-academy__logo {
+  color: $color-black;
+  flex-shrink: 0;
+  margin-left: 13px;
+
+  .html-academy:hover & {
+    color: $color-basic;
+  }
+
+  .html-academy:active & {
+    color: rgba($color-black, 0.3);
+  }
+}

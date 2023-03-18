@@ -1,0 +1,98 @@
+.site-menu {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $width-max-mobile) {
+    background-color: $color-basic;
+  }
+
+  @media (min-width: $width-tablet) {
+    // Для 100%-го вертикального растягивания ссылок меню в tablet + раскладке.
+    // Растягивает список меню на 100% по контентной части страницы.
+    flex-grow: 1;
+    position: initial;
+    display: grid;
+    grid-template-columns: 1fr 1fr 151px 1fr 1fr;
+    grid-template-areas: "a b x c d";
+    background-color: $color-white;
+  }
+
+  @media (min-width: $width-desktop) {
+    grid-template-columns: 1fr 1fr 244px 1fr 1fr;
+  }
+
+  &--opened {
+    @media (max-width: $width-max-mobile) {
+      display: grid;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  &--nojs {
+    display: grid;
+  }
+}
+
+.site-menu__item {
+  position: relative;
+  display: flex;
+  text-align: center;
+  word-break: break-word;
+
+  // Прописываю минимальную высоту элемента меню для того для того, чтобы
+  // при переполнении главного меню в планшетном+ вюпорте выдерживалась высота строки.
+  @media (min-width: $width-tablet) {
+    min-height: 56px;
+  }
+
+  &::after {
+    @media (max-width: $width-max-mobile) {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      // !TEMP
+      background-color: rgba($color-white, 0.2);
+      // box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.site-menu__item:nth-of-type(4n-1) {
+  @media (min-width: $width-tablet) {
+    grid-column-start: c;
+  }
+}
+
+.site-menu__link {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  color: $color-white;
+  text-decoration: none;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 0;
+    line-height: 26px;
+    color: $color-black;
+  }
+
+  &:not(:link) {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,26 @@
+.header {
+  max-width: $width-desktop-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $color-white;
+}
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  @media (min-width: $width-tablet) {
+    z-index: 1;
+  }
+
+  &--nojs {
+    @media (max-width: $width-max-mobile) {
+      position: initial;
+      transform: initial;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

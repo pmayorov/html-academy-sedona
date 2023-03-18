@@ -4,9 +4,25 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 // body > * {
 //   outline: 1px solid palevioletred;
 // }
+
+// !DEV
+
+// ol, ul, li {
+//   display: block;
+//   margin: 0;
+//   padding: 0;
+//   list-style-type: none;
+// }
+
+// ! DEV - END
 
 // body > * > * {
 //   outline: 1px dotted slateblue;

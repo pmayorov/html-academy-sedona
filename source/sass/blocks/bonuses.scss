@@ -1,0 +1,109 @@
+.bonuses {
+  width: 100%;
+  padding: 35px $width-mobile-padding;
+  background-color: $color-white;
+  text-align: left;
+
+  // @media (max-width: $width-tablet) {  }
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1 / -1;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+
+.bonuses__list {
+  display: grid;
+  padding: 0;
+  list-style-type: none;
+
+  @media (max-width: $width-max-mobile) {
+    row-gap: 26px;
+  }
+
+  @media (min-width: $width-tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.bonuses__item {
+
+  // DEV - START!
+  // @include outline(1px, dotted, mediumslateblue);
+  // DEV - END!
+
+  @media (max-width: $width-max-mobile) {
+    padding-left: 52px;
+  }
+
+  @media (min-width: $width-tablet) {
+    min-height: 330px;
+    padding: 158px 38px 60px;
+  }
+}
+
+.bonuses__title {
+  position: relative;
+  margin: 0 0 16px;
+
+  @media (min-width: $width-tablet) {
+    margin: 0 0 22px;
+    font-size: 21px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    // background-color: aquamarine;
+
+    @media (max-width: $width-max-mobile) {
+      top: 50%;
+      left: -52px;
+      width: 46px;
+      height: 50px;
+      transform: translateY(-50%);
+      background-position: left center;
+    }
+
+    @media (min-width: $width-tablet) {
+      top: -126px;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      transform: translateX(-50%);
+      background-position: center bottom;
+    }
+  }
+
+  &--house::before {
+    background-image: url("../../img/icons/icon-house.svg");
+
+    @media (max-width: $width-max-mobile) {
+      background-size: 39px auto;
+    }
+  }
+
+  &--gift::before {
+    background-image: url("../../img/icons/icon-gift.svg");
+
+    @media (max-width: $width-max-mobile) {
+      background-size: 32px auto;
+    }
+  }
+
+  &--eat::before {
+    background-image: url("../../img/icons/icon-burger.svg");
+
+    @media (max-width: $width-max-mobile) {
+      background-size: 40px auto;
+    }
+  }
+}
+
+.bonuses__desc {
+  margin: 0;
+  color: $color-gray-33;
+}
