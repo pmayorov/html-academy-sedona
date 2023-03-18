@@ -10,4 +10,3 @@ navButton.onclick = function () {
   navButton.classList.toggle('nav-button--active');
   siteMenu.classList.toggle('site-menu--opened');
 }
-
