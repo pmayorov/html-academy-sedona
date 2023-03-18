@@ -94,7 +94,7 @@ img {
 .hero {
   position: relative;
   width: 100%;
-  background: url("../../img/index/index-hero.svg") no-repeat, url("../../img/index/hero-mobile.jpg") no-repeat;
+  background: url("../img/index/index-hero.svg") no-repeat, url("../img/index/hero-mobile.jpg") no-repeat;
   background-color: #81b3d2;
 }
 @media (max-width: 767px) {
@@ -117,7 +117,7 @@ img {
   right: 0;
   bottom: 0;
   height: 57px;
-  background: url("../../img/index/bottom-polygon.svg") no-repeat center;
+  background: url("../img/index/bottom-polygon.svg") no-repeat center;
   background-size: cover;
 }
 
@@ -185,7 +185,7 @@ img {
   height: 22px;
   padding: 0;
   border: none;
-  background: url("../../img/icons/icon-menu.svg");
+  background: url("../img/icons/icon-menu.svg");
 }
 @media (min-width: 768px) {
   .nav-button {
@@ -199,7 +199,7 @@ img {
   position: absolute;
   top: 17px;
   right: 0;
-  background: url("../../img/icons/icon-cross.svg");
+  background: url("../img/icons/icon-cross.svg");
   z-index: 2;
 }
 .nav-button--nojs {
@@ -389,7 +389,7 @@ img {
     right: 0;
     top: 0;
     height: 37px;
-    background: url("../../img/index/advantages-polygon.svg") no-repeat center;
+    background: url("../img/index/advantages-polygon.svg") no-repeat center;
     background-size: cover;
   }
 }
@@ -580,7 +580,7 @@ img {
   }
 }
 .bonuses__title--house::before {
-  background-image: url("../../img/icons/icon-house.svg");
+  background-image: url("../img/icons/icon-house.svg");
 }
 @media (max-width: 767px) {
   .bonuses__title--house::before {
@@ -588,7 +588,7 @@ img {
   }
 }
 .bonuses__title--gift::before {
-  background-image: url("../../img/icons/icon-gift.svg");
+  background-image: url("../img/icons/icon-gift.svg");
 }
 @media (max-width: 767px) {
   .bonuses__title--gift::before {
@@ -596,7 +596,7 @@ img {
   }
 }
 .bonuses__title--eat::before {
-  background-image: url("../../img/icons/icon-burger.svg");
+  background-image: url("../img/icons/icon-burger.svg");
 }
 @media (max-width: 767px) {
   .bonuses__title--eat::before {

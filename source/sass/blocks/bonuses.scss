@@ -79,7 +79,7 @@
   }
 
   &--house::before {
-    background-image: url("../../img/icons/icon-house.svg");
+    background-image: url("../img/icons/icon-house.svg");
 
     @media (max-width: $width-max-mobile) {
       background-size: 39px auto;
@@ -87,7 +87,7 @@
   }
 
   &--gift::before {
-    background-image: url("../../img/icons/icon-gift.svg");
+    background-image: url("../img/icons/icon-gift.svg");
 
     @media (max-width: $width-max-mobile) {
       background-size: 32px auto;
@@ -95,7 +95,7 @@
   }
 
   &--eat::before {
-    background-image: url("../../img/icons/icon-burger.svg");
+    background-image: url("../img/icons/icon-burger.svg");
 
     @media (max-width: $width-max-mobile) {
       background-size: 40px auto;
