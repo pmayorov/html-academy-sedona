@@ -1,20 +1,46 @@
 .hotel-search {
+  width: calc(100vw - 2 * $width-mobile-padding);
+  max-width: 458px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 34px 0 49px;
   text-align: center;
+
+  @media (min-width: $width-tablet) {
+    padding: 58px 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 66px;
+  }
 }
 
 .hotel-search__heading {
   margin: 0 0 19px;
+  font-size: 21px;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 32px;
+    font-size: 30px;
+  }
 }
 
 .hotel-search__lead {
   margin: 0;
+  line-height: 24px;
 }
 
 .hotel-search__button {
   display: block;
-  max-width: 458px;
-  margin: 27px auto 0;
+  margin: 30px auto 0;
   padding: 16px;
   text-decoration: none;
+
+  @media (min-width: $width-tablet) {
+    margin-top: 38px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-top: 44px;
+  }
 }

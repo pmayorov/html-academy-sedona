@@ -2,16 +2,12 @@
 .html-academy {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+  padding: 0 15px;
   line-height: 26px;
   text-decoration: none;
-  color: $color-black ;
   word-break: break-word;
-
-  // @media (max-width: $width-max-mobile) {
-  //   justify-content: space-between;
-  //   margin-left: -5px;
-  // }
-
+  color: $color-black;
 }
 
 .html-academy__logo {
@@ -20,7 +16,7 @@
   margin-left: 13px;
 
   .html-academy:hover & {
-    color: $seagul-basic;
+    color: $color-basic;
   }
 
   .html-academy:active & {

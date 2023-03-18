@@ -1,24 +1,30 @@
 .hero {
+  position: relative;
   width: 100%;
-  // background-color: $seagul-basic;
-  background-color: grey;
-  background-repeat: no-repeat;
-  background-position: center;
-  object-fit: contain;
+  background:
+    url("../../img/index/index-hero.svg") no-repeat,
+    url("../../img/index/hero-mobile.jpg") no-repeat;
+  background-color: $color-basic;
 
   @media (max-width: $width-max-mobile) {
-    background-image: url("../../img/index/hero-mobile.jpg");
     height: 389px;
+    background-position: center 90px, center -40px;
   }
 
   @media (min-width: $width-tablet) {
-    background-image: url("../../img/index/hero-mobile.jpg");
     height: 518px;
+    background-size: 461px, auto;
+    background-position: center 79px, center;
   }
 
-  @media (min-width: $width-tablet) {
-    background-image: url("../../img/index/hero-mobile.jpg");
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 57px;
+    background: url("../../img/index/bottom-polygon.svg") no-repeat center;
+    background-size: cover;
   }
-
-
 }

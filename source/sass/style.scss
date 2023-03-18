@@ -10,7 +10,8 @@
 @import "./common/mixins.scss";
 
 /// Блоки
-
+@import "./blocks/title.scss";
+@import "./blocks/button.scss";
 @import "./blocks/page.scss";
 @import "./blocks/body.scss";
 @import "./blocks/container.scss";
@@ -28,7 +29,3 @@
 @import "./blocks/footer.scss";
 @import "./blocks/socials.scss";
 @import "./blocks/html-academy.scss";
-
-
-@import "./blocks/title.scss";
-@import "./blocks/button.scss";

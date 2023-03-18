@@ -1,11 +1,19 @@
 .socials {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 6px;
   padding: 0;
   list-style-type: none;
 }
 
 .socials__link {
-  color: $color-black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: $color-white;
+  background-color: $color-basic;
   text-decoration: none;
 }

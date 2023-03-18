@@ -3,13 +3,13 @@
   margin-left: auto;
   margin-right: auto;
   background-color: $color-white;
-
 }
 
 .header__logo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 
   @media (min-width: $width-tablet) {
     z-index: 1;

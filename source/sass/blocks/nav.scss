@@ -6,6 +6,9 @@
   padding: 17px 0;
 
   @media (min-width: $width-tablet) {
+    // Для 100%-го вертикального растягивания ссылок меню в tablet + раскладке.
+    // Растягивает дочерние блоки-списки на всю высоту.
+    display: flex;
     padding: 0;
   }
 }
@@ -24,5 +27,4 @@
 
 .nav__list {
   display: grid;
-
 }

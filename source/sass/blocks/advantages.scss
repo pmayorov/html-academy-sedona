@@ -1,93 +1,191 @@
 .advantages {
   padding-top: 32px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 44px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 55px;
+  }
+}
+
+.advantages__header-holder {
+  width: calc(100vw - 2 * $width-mobile-padding);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .advantages__heading {
   margin: 0 0 31px;
   text-align: center;
+
+  @media (min-width: $width-tablet) {
+    font-size: 21px;
+  }
 }
 
 .advantages__lead {
-  margin: 0 0 33px;
+  margin: 0 0 12px;
   text-align: center;
   line-height: 26px;
   color: $color-gray-33;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 41px;
+  }
 }
 
+// Список преимуществ
 .advantages__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   background-color: $color-gray-ee;
+  counter-reset: item;
 
   @media (min-width: $width-tablet) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
   }
 }
 
+// Карточка списка преимуществ
 .advantages__item {
   display: grid;
   text-align: center;
 
+  // Большая карточкая списка преимуществ
   &--big {
     grid-column: 1 / -1;
-    background-color: $seagul-basic;
+    background-color: $color-basic;
 
     @media (min-width: $width-tablet) {
       grid-template-columns: repeat(3, 1fr);
     }
-  }
 
-  &--big:first-of-type::before {
-    @media (max-width: $width-tablet) {
-      display: block;
-      content: "";
-      width: 100%;
-      height: 15px;
-      background-color: $color-gray-ba;
+    // Верхний паддинг в 1-й большой карточке
+    // в мобильном для размещения декоративного элемента
+    &:first-of-type {
+      @media (max-width: $width-max-mobile) {
+        position: relative;
+        padding-top: 37px;
+      }
+    }
+
+    // Декоративный элемент над 1-й большой карточкой
+    &:first-of-type::before {
+      @media (max-width: $width-max-mobile) {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 37px;
+        background: url("../../img/index/advantages-polygon.svg") no-repeat center;
+        background-size: cover;
+      }
     }
   }
 
-  &:not(.advantages__item--big):not(:last-of-type)::after {
-    @media (max-width: $width-tablet) {
-      display: block;
-      content: "";
-      width: calc(100% - $width-mobile-padding * 2);
-      margin: 0 auto;
-      height: 1px;
-      background-color: $color-gray-d6;
+  // Малая карточка списка преимуществ
+  &--small {
+
+    // Линии над малыми карточками. Над каждой, кроме 1-й в мобилке
+    & + &::before {
+      @media (max-width: $width-max-mobile) {
+        @include topline();
+      }
+    }
+
+    // Линии над малыми карточкасм. Над всеми после 1-го ряда (3-го по счету блока) в планшете+
+    // !Костыль (n+6) - при изменении кол-ва карточек над ним перед поплывет правило
+    &::before {
+      @media (min-width: $width-tablet) {
+        @include topline();
+      }
     }
   }
 }
 
-.advantages__bonuses {
-  padding: 35px $width-mobile-padding;
-}
-
+// Контентная информация блока преимуществ
 .advantages__content {
-
-  @media (max-width: $width-tablet) {
-    padding: 39px $width-mobile-padding 35px;
+  @media (max-width: $width-max-mobile) {
+    padding: 26px $width-mobile-padding 25px;
   }
 
   @media (min-width: $width-tablet) {
-    padding: 0 32px;
+    padding: 42px 40px;
+    min-height: 256px;
+  }
+
+  // Контентная информация большого блока преимуществ
+  .advantages__item--big & {
+    @media (max-width: $width-max-mobile) {
+      padding: 37px $width-mobile-padding;
+    }
+
+    @media (min-width: $width-tablet) {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 32px 32px;
+    }
+
+    @media (min-width: $width-desktop) {
+      padding-top: 47px;
+    }
   }
 }
 
+// Заголовок блока преимуществ
 .advantages__title {
+  position: relative;
   margin: 0 0 48px;
 
+  @media (min-width: $width-tablet) {
+    margin-bottom: 55px;
+    font-size: 21px;
+  }
+
+  &::after {
+    position: absolute;
+    counter-increment: item;
+    content: "– № " counter(item) " –";
+    left: 50%;
+    width: 100px;
+    height: 30px;
+    // Вниз на сумму высот блока под нумерацию + величина самого отступа от заголовка
+    bottom: -1 * (30px + 11px);
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  // Устанавливаю ширину заголовка в блоке малых преимуществ по минимальному контенту
+  .advantages__item:not(.advantages__item--big) & {
+    @media (min-width: $width-tablet) {
+      width: min-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  // Заголовок большого блока преимуществ
   .advantages__item--big & {
     color: $color-white;
   }
 }
 
+// Описание преимуществ
 .advantages__desc {
-  margin: 0 0 21px;
+  margin: 0;
 
+  // Описание большого блока преимуществ
   .advantages__item--big & {
     color: $color-white;
   }
@@ -96,9 +194,21 @@
 .advantages__image {
   display: block;
   width: 100%;
-  max-height: 260px;
+  height: 260px;
+  object-fit: cover;
 
   @media (min-width: $width-tablet) {
+
+    // Вариант №1 -  высота блока с фото будет статичной
+    // в течение всего изменения ширины вьюпорта, как задумано в макете
+
+    height: 256px;
+
+    // Вариант №2 - высота блока фото будет подстраиваться под переполнение текстовой части
+
+    // min-height: 256px;
+    // height: 100%;
+
     grid-column: 2 / span 2;
   }
 

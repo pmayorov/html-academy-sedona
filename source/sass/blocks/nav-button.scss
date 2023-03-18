@@ -4,6 +4,7 @@
   height: 22px;
   padding: 0;
   border: none;
+  background: url("../../img/icons/icon-menu.svg");
 
   @media (min-width: $width-tablet) {
     display: none;
@@ -17,7 +18,8 @@
     position: absolute;
     top: 17px;
     right: 0;
-    z-index: 1;
+    background: url("../../img/icons/icon-cross.svg");
+    z-index: 2;
   }
 
   &--nojs {
