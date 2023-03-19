@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} Серия книг о Шерлоке Холмсе {% endblock %}
+
+{% block content %}
+
+<h1>Серия романов о Гарри Поттере</h1>
+
+<div id="books">
+  {% for book in elem_books %}
+  <div class="book">
+    <strong>{{book.number}}</strong>. "<em>{{book.title}}"</em> - {{book.date}}
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
