@@ -8,6 +8,10 @@
   text-decoration: none;
   word-break: break-word;
   color: $color-black;
+
+  &:focus-visible {
+    outline: 3px solid $color-focus;
+  }
 }
 
 .html-academy__logo {

@@ -4,4 +4,17 @@
   line-height: 26px;
   color: $color-white;
   background-color: $color-basic;
+
+  &:hover {
+    background-color: $color-btn-active;
+  }
+
+  &:active {
+    color: rgba($color-white, $opacity-lnk-active);
+    background-color: $color-btn-active;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-focus;
+  }
 }

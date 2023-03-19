@@ -16,4 +16,20 @@
   color: $color-white;
   background-color: $color-basic;
   text-decoration: none;
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
+
+  &:active {
+    background-color: $color-btn-active;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-focus;
+  }
 }

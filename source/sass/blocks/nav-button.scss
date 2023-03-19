@@ -4,22 +4,38 @@
   height: 22px;
   padding: 0;
   border: none;
-  background: url("../img/icons/icon-menu.svg");
+  background-color: $color-basic;
+  mask: url("../img/icons/icon-menu.svg") no-repeat center;
 
   @media (min-width: $width-tablet) {
     display: none;
   }
 
   &:hover {
+    opacity: 0.6;
     cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   &--active {
     position: absolute;
     top: 17px;
     right: 0;
-    background: url("../img/icons/icon-cross.svg");
+    mask: none;
+    mask-image: none;
+    background: url("../img/icons/icon-cross.svg") no-repeat center;
     z-index: 2;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &--nojs {
