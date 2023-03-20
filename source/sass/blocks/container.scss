@@ -1,27 +1,9 @@
-// .container {
-
-//   @include outline();
-
-//   margin-left: auto;
-//   margin-right: auto;
-
-//   @media (max-width: $width-tablet) {
-//     width: $width-mobile-content;
-//   }
-
-//   @media (min-width: $width-tablet) {
-//     width: $width-tablet-content;
-//   }
-
-//   @media (min-width: $width-desktop) {
-//     width: $width-desktop-content;
-//   }
-// }
-
 .container {
-  @include outline();
   width: calc(100vw - 2 * $width-mobile-padding);
-  max-width: $width-desktop-content;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: $width-pre-desktop - 2 * $width-desktop-padding;
+  margin: 0 auto;
+
+  @media (min-width: $width-tablet) {
+    width: calc(100vw - 2 * $width-tablet-padding);
+  }
 }

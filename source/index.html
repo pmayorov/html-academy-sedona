@@ -11,9 +11,9 @@
   <!-- DEV - Визуализация разметки -->
   <!-- <link rel="stylesheet" href="./css/outline.css"> -->
   <!-- <link rel="stylesheet" href="./css/markup.css"> -->
-  <link rel="stylesheet" href="./css/pixel-index.css">
+  <!-- <link rel="stylesheet" href="./css/pixel-index.css">
   <link href="./pixelglass/styles.css" rel="stylesheet">
-  <script src="./pixelglass/script.js"></script>
+  <script src="./pixelglass/script.js"></script> -->
   <!-- DEV - END -->
 
   <!-- Подключение стилей проекта -->
@@ -36,19 +36,20 @@
     <nav class="nav">
       <button class="nav__button nav-button nav-button--nojs" type="button"><span class="visually-hidden">Главное меню</span></button>
       <ul class="site-menu site-menu--nojs">
-        <li class="site-menu__item"><a class="site-menu__link site-menu__link--current">Главная</a></li>
+        <li class="site-menu__item"><a class="site-menu__link site-menu__link--current" href="./index.html">Главная</a></li>
         <li class="site-menu__item"><a class="site-menu__link" href="./catalog.html">Фото и видео</a></li>
         <li class="site-menu__item"><a class="site-menu__link" href="./form.html">Форма отзыва</a></li>
-        <li class="site-menu__item"><a class="site-menu__link" href="#">html academy</a></li>
+        <li class="site-menu__item"><a class="site-menu__link" href="https://htmlacademy.org/">html academy</a></li>
       </ul>
     </nav>
   </header>
+  <!-- HEADER - END -->
 
   <!-- INDEX - MAIN -->
   <main class="page__main main">
 
     <!-- ПРОМО БЛОК -->
-    <header class="hero">
+    <header class="hero hero--big">
       <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
       <p class="visually-hidden"><b>Мы круче, чем Гранд Каньон!</b></p>
     </header>
@@ -56,7 +57,7 @@
     <!-- ПРЕИМУЩЕСТВА -->
     <section class="advantages">
 
-      <div class="advantages__header-holder">
+      <div class="advantages__header">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <p class="advantages__heading title">Седона – небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="advantages__lead">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -144,8 +145,10 @@
     </footer>
   </main>
 
-  <!-- INDEX - FOOTER -->
+  <!-- FOOTER - START -->
   <footer class="page__footer footer">
+    <div class="footer__inner container">
+
     <!-- Хештег Седоны-->
     <a class="footer__hashtag title" href="#">#Visitsedona</a>
     <!-- Меню соцсетей -->
@@ -176,12 +179,15 @@
       </li>
     </ul>
     <!-- Логотип академии -->
-    <a class="footer__copyright html-academy" href="#">Разработано
+    <a class="footer__copyright html-academy" href="https://htmlacademy.org/">Разработано
       <svg class="html-academy__logo" width="27" height="34" role="img" aria-hidden="true">
         <use xlink:href="./img/icons/sprite.svg#html-academy"></use>
       </svg>
     </a>
+    </div>
   </footer>
+  <!-- FOOTER - END -->
+
   <script src="./js/site-menu.js"></script>
 </body>
 

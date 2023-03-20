@@ -1,0 +1,69 @@
+.form-body {
+  display: grid;
+  margin: 0 auto;
+  line-height: 26px;
+
+  @media (min-width: $width-tablet) {
+    grid-template-columns: 1fr 1fr;
+    width: calc(100vw - 2 * $width-tablet-padding);
+    max-width: $width-pre-desktop - 2 * $width-desktop-padding;
+  }
+
+  // @media (min-width: $width-pre-desktop) {  }
+}
+
+.form-body__inner {
+  @media (max-width: $width-max-mobile) {
+    padding: 20px $width-mobile-padding 30px;
+    border-top: 1px solid $color-gray-e5;
+  }
+
+  &--full-width {
+    @media (min-width: $width-tablet) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &--first-cell {
+    @media (min-width: $width-tablet) {
+      grid-row: 1;
+      grid-column: 1;
+    }
+  }
+}
+
+.form-body__fieldset {
+  margin: 0 auto;
+
+  @media (max-width: $width-max-mobile) {
+    // Останавливаем расширение блока на контентной ширине (648px) планшетного вьюпорта,
+    // иначе ширина контента дергается при переходе через брекпоинт.
+    max-width: $width-tablet - 2 * $width-tablet-padding;
+  }
+}
+
+.form-body__submit {
+  display: grid;
+
+  @media (max-width: $width-max-mobile) {
+    width: calc(100vw - 2 * $width-mobile-padding);
+    max-width: $width-tablet - 2 * $width-tablet-padding;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $width-tablet) {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / -1;
+    justify-content: space-between;
+  }
+
+  & span {
+    @media (max-width: $width-max-mobile) {
+      display: none;
+    }
+
+    @media (min-width: $width-tablet) {
+      justify-self: end;
+    }
+  }
+}

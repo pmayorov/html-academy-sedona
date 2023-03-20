@@ -20,127 +20,169 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="">
+<body class="page__body body">
 
   <!-- FORM - HEADER -->
 
-  <header class="">
-    <!-- Навигация -->
-    <nav class="">
-      <!-- Логотип -->
-      <a class=""><img width="102" height="84" class="" src="./img/logos/sedona-small.svg" alt="Логотип города Седона"></a>
-      <button class="" type="button"><span class="visually-hidden">Главное меню</span></button>
-      <!-- Главное меню -->
-      <ul class="">
-        <li class=""><a class="" href="./index.html">Главная</a></li>
-        <li class=""><a class="" href="./catalog.html">Фото и видео</a></li>
-        <li class=""><a class="">Форма отзыва</a></li>
-        <li class=""><a class="" href="#">html academy</a></li>
+  <header class="page__header header">
+    <!-- Логотип -->
+    <a class="header__logo header__logo--nojs logo" href="./index.html">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="./img/logos/sedona-big.svg">
+        <img class="logo__image" width="102" height="84" src="./img/logos/sedona-small.svg" alt="Логотип города Седона">
+      </picture>
+    </a>
+    <!-- Главное меню -->
+    <nav class="nav">
+      <button class="nav__button nav-button nav-button--nojs" type="button"><span class="visually-hidden">Главное меню</span></button>
+      <ul class="site-menu site-menu--nojs">
+        <li class="site-menu__item"><a class="site-menu__link" href="./index.html">Главная</a></li>
+        <li class="site-menu__item"><a class="site-menu__link" href="./catalog.html">Фото и видео</a></li>
+        <li class="site-menu__item"><a class="site-menu__link site-menu__link--current" href="./form.html">Форма отзыва</a></li>
+        <li class="site-menu__item"><a class="site-menu__link" href="https://htmlacademy.org/">html academy</a></li>
       </ul>
     </nav>
   </header>
+  <!-- HEADER - END -->
 
   <!-- FORM - MAIN -->
-  <main class="">
+  <main class="page__main main">
 
     <!-- Промо блок -->
-    <header class="">
+    <header class="hero hero--small">
       <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
       <h2 class="visually-hidden">Мы круче, чем Гранд Каньон!</h2>
-      <div class="">HERO-блок</div>
     </header>
 
     <!-- Секция формы с отзывом -->
-    <section class="">
-      <div class="container">
-        <h2 class="">Оставьте свой отзыв</h2>
-        <p class="">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    <section class="form-section">
+      <div class="form-section__header">
+        <h2 class="form-section__heading title">Оставьте свой отзыв</h2>
+        <p class="form-section__lead">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
 
       <!-- Форма отзыва -->
-      <form class="" action="https://echo.htmlacademy.ru" name="review-form" method="post">
+      <form class="form-body" action="https://echo.htmlacademy.ru" name="review-form" method="post">
+
         <!-- ФИО -->
-        <fieldset class="">
-          <legend class="">
-            <h3 class="container">Представьтесь:</h3>
-          </legend>
-          <ul class="container" role="none">
-            <li class=""><label class="">Имя*:</label><input class="" type="text" name="name" required></li>
-            <li class=""><label class="">Фамилия*:</label><input class="" type="text" name="surname" required></li>
-            <li class=""><label class="">Отчество:</label><input class="" type="text" name="patronymic"></li>
-          </ul>
-        </fieldset>
-
-        <!-- Контакты -->
-        <fieldset class="">
-          <legend class="">
-            <h3 class="container">Контактная информация:</h3>
-          </legend>
-          <ul class="container" role="none">
-            <li class=""><label class="">Контактный телефон*:</label><input class="" type="tel" name="phone" required></li>
-            <li class=""><label class="">Электронная почта*:</label><input class="" type="email" name="email" required></li>
-          </ul>
-        </fieldset>
-
-        <!-- Впечатление -->
-        <fieldset class="">
-          <legend class="">
-            <h3 class="container">Ваше общее впечатление:</h3>
-          </legend>
-          <ul class="container" role="none">
-            <li class=""><input class="" type="radio" name="impress" value="positive"><label class="">Скорее положительное</label></li>
-            <li class=""><input class="" type="radio" name="impress" value="negative"><label class="">Скорее отрицательное</label></li>
-            <li class=""><input class="" type="radio" name="impress" value="no-answer"><label class="">Затрудняюсь ответить</label></li>
-          </ul>
-        </fieldset>
-
-        <!-- Достопримечательности -->
-        <fieldset class="">
-          <legend class="">
-            <h3 class="container">Посещенные достопримечательности:</h3>
-          </legend>
-          <ul class="container" role="none">
-            <li class=""><input class="" type="checkbox" name="sights" value="devil-bridge"><label class="">Мост Дьявола</label></li>
-            <li class=""><input class="" type="checkbox" name="sights" value="mount-bell"><label class="">Гора-Колокол</label></li>
-            <li class=""><input class="" type="checkbox" name="sights" value="slide-park"><label class="">Слайд-парк</label></li>
-            <li class=""><input class="" type="checkbox" name="sights" value="red-rocks"><label class="">Красные скалы</label></li>
-          </ul>
-        </fieldset>
-
-        <!-- Эмоции-->
-        <div class="">
-          <label class="">
-            <h3 class="container">Опишите свои эмоции:</h3>
-          </label>
-          <textarea class="container" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+        <div class="form-body__inner">
+          <fieldset class="form-body__fieldset form-body__fieldset--whois fieldset">
+            <legend class="fieldset__legend">
+              <h3 class="fieldset__title title">Представьтесь:</h3>
+            </legend>
+            <ul class="fieldset__list" role="none">
+              <li class="fieldset__item field"><label class="field__name">Имя*:</label><input class="field__text" type="text" name="name" required></li>
+              <li class="fieldset__item field"><label class="field__name">Фамилия*:</label><input class="field__text" type="text" name="surname" required></li>
+              <li class="fieldset__item field"><label class="field__name">Отчество:</label><input class="field__text" type="text" name="patronymic"></li>
+            </ul>
+          </fieldset>
         </div>
 
-        <p class="">
-          <button class="" type="submit">Отправить отзыв</button>
+        <!-- Контакты -->
+        <div class="form-body__inner form-body__inner--full-width">
+          <fieldset class="form-body__fieldset form-body__fieldset--contacts fieldset">
+            <legend class="fieldset__legend">
+              <h3 class="fieldset__title title">Контактная информация:</h3>
+            </legend>
+            <ul class="fieldset__list" role="none">
+              <li class="fieldset__item field"><label class="field__name">Контактный телефон*:</label><input class="field__text" type="tel" name="phone" required></li>
+              <li class="fieldset__item field"><label class="field__name">Электронная почта*:</label><input class="field__text" type="email" name="email" required></li>
+            </ul>
+          </fieldset>
+        </div>
+
+        <!-- Впечатление -->
+        <div class="form-body__inner form-body__inner--first-cell">
+          <fieldset class="form-body__fieldset form-body__fieldset--impress fieldset">
+            <legend class="fieldset__legend">
+              <h3 class="fieldset__title title">Ваше общее впечатление:</h3>
+            </legend>
+            <ul class="fieldset__list" role="none">
+              <li class="fieldset__item field"><input class="" type="radio" name="impress" value="positive"><label class="field__name">Скорее положительное</label></li>
+              <li class="fieldset__item field"><input class="" type="radio" name="impress" value="negative"><label class="field__name">Скорее отрицательное</label></li>
+              <li class="fieldset__item field"><input class="" type="radio" name="impress" value="no-answer"><label class="field__name">Затрудняюсь ответить</label></li>
+            </ul>
+          </fieldset>
+        </div>
+
+        <!-- Достопримечательности -->
+        <div class="form-body__inner form-body__inner--full-width">
+          <fieldset class="form-body__fieldset form-body__fieldset--sight fieldset">
+            <legend class="fieldset__legend">
+              <h3 class="fieldset__title title">Посещенные достопримечательности:</h3>
+            </legend>
+            <ul class="fieldset__list" role="none">
+              <li class="fieldset__item field"><input class="" type="checkbox" name="sights" value="devil-bridge"><label class="field__name">Мост Дьявола</label></li>
+              <li class="fieldset__item field"><input class="" type="checkbox" name="sights" value="mount-bell"><label class="field__name">Гора-Колокол</label></li>
+              <li class="fieldset__item field"><input class="" type="checkbox" name="sights" value="slide-park"><label class="field__name">Слайд-парк</label></li>
+              <li class="fieldset__item field"><input class="" type="checkbox" name="sights" value="red-rocks"><label class="field__name">Красные скалы</label></li>
+            </ul>
+          </fieldset>
+        </div>
+
+        <!-- Эмоции-->
+        <div class="form-body__inner form-body__inner--full-width">
+            <!-- ! Рефакторить БЕМ класифікацію  - бо шось воно не того!-->
+          <div class="form-body__fieldset form-body__fieldset--comments fieldset">
+            <label class="fieldset__legend">
+              <h3 class="fieldset__title title">Опишите свои эмоции:</h3>
+            </label>
+            <!-- todo Элемент field__textarea без блока -->
+            <textarea class="field__textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+          </div>
+        </div>
+
+        <p class="form-body__submit">
+          <button class="form-body__button button" type="submit">Отправить отзыв</button>
           <span>* — обязательные поля</span>
         </p>
       </form>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
+  <!-- FOOTER - START -->
+  <footer class="page__footer footer">
+    <div class="footer__inner container">
       <!-- Хештег Седоны-->
-      <a class="" href="#">#Visitsedona</a>
+      <a class="footer__hashtag title" href="#">#Visitsedona</a>
       <!-- Меню соцсетей -->
-      <ul class="">
-        <li class=""><a href="#">Twitter</a></li>
-        <li class=""><a href="#">Facebook</a></li>
-        <li class=""><a href="#">YouTube</a></li>
+      <ul class="footer__list socials">
+        <li class="footer__item">
+          <a class="socials__link social__link--twitter" href="#">
+            <span class="visually-hidden">Twitter</span>
+            <svg width="18" height="15" aria-hidden="true">
+              <use xlink:href="./img/icons/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="socials__link social__link--facebook" href="#">
+            <span class="visually-hidden">Facebook</span>
+            <svg width="9" height="19" aria-hidden="true">
+              <use xlink:href="./img/icons/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="socials__link social__link--youtube" href="#">
+            <span class="visually-hidden">YouTube</span>
+            <svg width="20" height="14" aria-hidden="true">
+              <use xlink:href="./img/icons/sprite.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
       </ul>
       <!-- Логотип академии -->
-      <a class="" href="#">Разработано
-        <svg class="" width="27" height="34" role="img" aria-hidden="true">
+      <a class="footer__copyright html-academy" href="https://htmlacademy.org/">Разработано
+        <svg class="html-academy__logo" width="27" height="34" role="img" aria-hidden="true">
           <use xlink:href="./img/icons/sprite.svg#html-academy"></use>
-        </svg></a>
+        </svg>
+      </a>
     </div>
   </footer>
+  <!-- FOOTER - END -->
+
+  <script src="./js/site-menu.js"></script>
 </body>
 
 </html>

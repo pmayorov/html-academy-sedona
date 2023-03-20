@@ -1,0 +1,30 @@
+.form-section {
+  padding-top: 36px;
+}
+
+.form-section__header {
+  width: calc(100vw - 2 * $width-mobile-padding);
+  max-width: 434px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-section__heading {
+  margin: 0;
+  line-height: 26px;
+
+  @media (max-width: $width-max-mobile) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 30px;
+  }
+}
+
+.form-section__lead {
+  margin: 0;
+  line-height: 26px;
+  // @media (max-width: $width-max-mobile) {}
+  // @media (min-width: $width-tablet) {}
+}

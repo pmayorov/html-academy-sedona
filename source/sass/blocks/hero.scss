@@ -1,20 +1,45 @@
 .hero {
   position: relative;
   width: 100%;
-  background:
-    url("../img/index/index-hero.svg") no-repeat,
-    url("../img/index/hero-mobile.jpg") no-repeat;
   background-color: $color-basic;
 
-  @media (max-width: $width-max-mobile) {
-    height: 389px;
-    background-position: center 90px, center -40px;
+  &--big {
+    background:
+      url("../img/index/index-hero-big.svg") no-repeat,
+      url("../img/index/hero-mobile.jpg") no-repeat;
+
+    @media (max-width: $width-max-mobile) {
+      height: 389px;
+      background-position: center 90px, center -40px;
+    }
+
+    @media (min-width: $width-tablet) {
+      height: 518px;
+      background-size: 461px, auto;
+      background-position: center 78px, center;
+    }
   }
 
-  @media (min-width: $width-tablet) {
-    height: 518px;
-    background-size: 461px, auto;
-    background-position: center 78px, center;
+  &--small {
+    background:
+      url("../img/index/index-hero-small.svg") no-repeat,
+      url("../img/index/hero-mobile.jpg") no-repeat;
+
+    @media (max-width: $width-max-mobile) {
+      height: 158px;
+      background-size: 229px, auto;
+      background-position: center, center -290px;
+    }
+
+    @media (min-width: $width-tablet) {
+      height: 290px;
+      background-size: 457px, auto;
+      background-position: center 95px, center bottom;
+    }
+
+    @media (min-width: $width-desktop) {
+      background-position: center 100px, center bottom;
+    }
   }
 
   &::after {

@@ -20,34 +20,38 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="">
+<body class="page__body body">
 
-  <!-- INDEX - HEADER -->
+  <!-- CATALOG - HEADER -->
+  <header class="page__header header">
 
-  <header class="">
-    <!-- Навигация -->
-    <nav class="">
-      <!-- Логотип -->
-      <a class=""><img width="102" height="84" class="" src="./img/logos/sedona-small.svg" alt="Логотип города Седона"></a>
-      <button class="" type="button"><span class="visually-hidden">Главное меню</span></button>
-      <!-- Главное меню -->
-      <ul class="">
-        <li class=""><a class="" href="./index.html">Главная</a></li>
-        <li class=""><a class="">Фото и видео</a></li>
-        <li class=""><a class="" href="./form.html">Форма отзыва</a></li>
-        <li class=""><a class="" href="#">html academy</a></li>
+    <!-- Логотип -->
+    <a class="header__logo header__logo--nojs logo" href="./index.html">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="./img/logos/sedona-big.svg">
+        <img class="logo__image" width="102" height="84" src="./img/logos/sedona-small.svg" alt="Логотип города Седона">
+      </picture>
+    </a>
+    <!-- Главное меню -->
+    <nav class="nav">
+      <button class="nav__button nav-button nav-button--nojs" type="button"><span class="visually-hidden">Главное меню</span></button>
+      <ul class="site-menu site-menu--nojs">
+        <li class="site-menu__item"><a class="site-menu__link" href="./index.html">Главная</a></li>
+        <li class="site-menu__item"><a class="site-menu__link site-menu__link--current" href="./catalog.html">Фото и видео</a></li>
+        <li class="site-menu__item"><a class="site-menu__link" href="./form.html">Форма отзыва</a></li>
+        <li class="site-menu__item"><a class="site-menu__link" href="https://htmlacademy.org/">html academy</a></li>
       </ul>
     </nav>
   </header>
+  <!-- HEADER - END -->
 
   <!-- INDEX - MAIN -->
-  <main class="">
+  <main class="page__main main">
 
     <!-- Промо блок -->
-    <header class="">
+    <header class="hero hero--small">
       <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
       <h2 class="visually-hidden">Мы круче, чем Гранд Каньон!</h2>
-      <div class="">HERO-блок</div>
     </header>
 
     <!-- Секция с преимуществами -->
@@ -114,24 +118,47 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <!-- Хештег Седоны-->
-      <a class="" href="#">#Visitsedona</a>
-      <!-- Меню соцсетей -->
-      <ul class="">
-        <li class=""><a href="#">Twitter</a></li>
-        <li class=""><a href="#">Facebook</a></li>
-        <li class=""><a href="#">YouTube</a></li>
-      </ul>
-      <!-- Логотип академии -->
-      <a class="" href="#">Разработано
-        <svg class="" width="27" height="34" role="img" aria-hidden="true">
-          <use xlink:href="./img/icons/sprite.svg#html-academy"></use>
-        </svg></a>
-    </div>
+  <!-- FOOTER - START -->
+  <footer class="page__footer footer">
+    <!-- Хештег Седоны-->
+    <a class="footer__hashtag title" href="#">#Visitsedona</a>
+    <!-- Меню соцсетей -->
+    <ul class="footer__list socials">
+      <li class="footer__item">
+        <a class="socials__link social__link--twitter" href="#">
+          <span class="visually-hidden">Twitter</span>
+          <svg width="18" height="15" aria-hidden="true">
+            <use xlink:href="./img/icons/sprite.svg#twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="socials__link social__link--facebook" href="#">
+          <span class="visually-hidden">Facebook</span>
+          <svg width="9" height="19" aria-hidden="true">
+            <use xlink:href="./img/icons/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="socials__link social__link--youtube" href="#">
+          <span class="visually-hidden">YouTube</span>
+          <svg width="20" height="14" aria-hidden="true">
+            <use xlink:href="./img/icons/sprite.svg#youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <!-- Логотип академии -->
+    <a class="footer__copyright html-academy" href="https://htmlacademy.org/">Разработано
+      <svg class="html-academy__logo" width="27" height="34" role="img" aria-hidden="true">
+        <use xlink:href="./img/icons/sprite.svg#html-academy"></use>
+      </svg>
+    </a>
   </footer>
+  <!-- FOOTER - END -->
+
+  <script src="./js/site-menu.js"></script>
 </body>
 
 </html>
