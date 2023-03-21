@@ -14,8 +14,54 @@
   text-align: center;
 }
 
+// Список с полями фиелдсета
+
 .fieldset__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  row-gap: 20px;
+
+  // Двухстрочный
+  &--two-rows {
+    row-gap: 14px;
+
+    @media (min-width: $width-tablet) {
+      row-gap: 25px;
+    }
+  }
+
+  // Контакты. Стилизация списка полей
+  .fieldset--contacts & {
+    @media (min-width: $width-pre-desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  // Достопримечательности
+  .fieldset--sight & {
+    @media (min-width: $width-tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $width-pre-desktop) {
+      grid-template-columns: repeat(4, 201px);
+      justify-content: space-between;
+    }
+  }
+}
+
+// Элемент списка полей фиелдсета
+.fieldset__item {
+
+  // Контакты. Десктоп. Каждое нечетное поле (1-я колонка) - отступ справа.
+  .fieldset--contacts &:nth-child(odd) {
+    @media (min-width: $width-pre-desktop) {
+      margin-right: 80px;
+    }
+  }
 }

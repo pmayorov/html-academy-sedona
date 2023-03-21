@@ -66,63 +66,99 @@
 
         <!-- ФИО -->
         <div class="form-body__inner">
-          <fieldset class="form-body__fieldset form-body__fieldset--whois fieldset">
+          <fieldset class="form-body__fieldset fieldset fieldset--whois">
             <legend class="fieldset__legend">
               <h3 class="fieldset__title title">Представьтесь:</h3>
             </legend>
             <ul class="fieldset__list" role="none">
-              <li class="fieldset__item field"><label class="field__name">Имя*:</label><input class="field__text" type="text" name="name" required></li>
-              <li class="fieldset__item field"><label class="field__name">Фамилия*:</label><input class="field__text" type="text" name="surname" required></li>
-              <li class="fieldset__item field"><label class="field__name">Отчество:</label><input class="field__text" type="text" name="patronymic"></li>
+              <li class="fieldset__item field field--input">
+                <label class="field__name">Имя*:</label>
+                <input class="field__input" type="text" name="name" placeholder="Петр" required>
+              </li>
+              <li class="fieldset__item field field--input">
+                <label class="field__name">Фамилия*:</label>
+                <input class="field__input" type="text" name="surname" placeholder="Иванов" required>
+              </li>
+              <li class="fieldset__item field field--input">
+                <label class="field__name">Отчество:</label>
+                <input class="field__input" type="text" placeholder="Александрович" name="patronymic">
+              </li>
             </ul>
           </fieldset>
         </div>
 
         <!-- Контакты -->
         <div class="form-body__inner form-body__inner--full-width">
-          <fieldset class="form-body__fieldset form-body__fieldset--contacts fieldset">
+          <fieldset class="form-body__fieldset fieldset fieldset--contacts">
             <legend class="fieldset__legend">
               <h3 class="fieldset__title title">Контактная информация:</h3>
             </legend>
-            <ul class="fieldset__list" role="none">
-              <li class="fieldset__item field"><label class="field__name">Контактный телефон*:</label><input class="field__text" type="tel" name="phone" required></li>
-              <li class="fieldset__item field"><label class="field__name">Электронная почта*:</label><input class="field__text" type="email" name="email" required></li>
+            <ul class="fieldset__list fieldset__list--two-rows" role="none">
+              <li class="fieldset__item field field--input field--two-rows">
+                <label class="field__name"><span>Контактный</span> телефон*:</label>
+                <input class="field__input" type="tel" name="phone" placeholder="Введите телефон" required>
+              </li>
+              <li class="fieldset__item field field--input field--two-rows">
+                <label class="field__name">Электронная почта*:</label>
+                <input class="field__input" type="email" name="email" placeholder="Введите e-mail" required>
+              </li>
             </ul>
           </fieldset>
         </div>
 
         <!-- Впечатление -->
         <div class="form-body__inner form-body__inner--first-cell">
-          <fieldset class="form-body__fieldset form-body__fieldset--impress fieldset">
+          <fieldset class="form-body__fieldset fieldset fieldset--impress">
             <legend class="fieldset__legend">
               <h3 class="fieldset__title title">Ваше общее впечатление:</h3>
             </legend>
             <ul class="fieldset__list" role="none">
-              <li class="fieldset__item field"><input class="" type="radio" name="impress" value="positive"><label class="field__name">Скорее положительное</label></li>
-              <li class="fieldset__item field"><input class="" type="radio" name="impress" value="negative"><label class="field__name">Скорее отрицательное</label></li>
-              <li class="fieldset__item field"><input class="" type="radio" name="impress" value="no-answer"><label class="field__name">Затрудняюсь ответить</label></li>
+              <li class="fieldset__item field field--select">
+                <input class="field__radio" type="radio" name="impress" value="positive" id="positive" checked>
+                <label class="field__name" for="positive">Скорее положительное</label>
+              </li>
+              <li class="fieldset__item field field--select">
+                <input class="field__radio" type="radio" name="impress" value="negative" id="negative">
+                <label class="field__name" for="negative">Скорее отрицательное</label>
+              </li>
+              <li class="fieldset__item field field--select">
+                <input class="field__radio" type="radio" name="impress" value="no-answer" id="no-answer">
+                <label class="field__name" for="no-answer">Затрудняюсь ответить</label>
+              </li>
             </ul>
           </fieldset>
         </div>
 
         <!-- Достопримечательности -->
         <div class="form-body__inner form-body__inner--full-width">
-          <fieldset class="form-body__fieldset form-body__fieldset--sight fieldset">
+          <fieldset class="form-body__fieldset fieldset fieldset--sight">
             <legend class="fieldset__legend">
               <h3 class="fieldset__title title">Посещенные достопримечательности:</h3>
             </legend>
             <ul class="fieldset__list" role="none">
-              <li class="fieldset__item field"><input class="" type="checkbox" name="sights" value="devil-bridge"><label class="field__name">Мост Дьявола</label></li>
-              <li class="fieldset__item field"><input class="" type="checkbox" name="sights" value="mount-bell"><label class="field__name">Гора-Колокол</label></li>
-              <li class="fieldset__item field"><input class="" type="checkbox" name="sights" value="slide-park"><label class="field__name">Слайд-парк</label></li>
-              <li class="fieldset__item field"><input class="" type="checkbox" name="sights" value="red-rocks"><label class="field__name">Красные скалы</label></li>
+              <li class="fieldset__item field field--select">
+                <input class="field__checkbox" type="checkbox" name="sight" value="devil-bridge" id="devil-bridge" checked>
+                <label class="field__name" for="devil-bridge">Мост Дьявола</label>
+              </li>
+              <li class="fieldset__item field field--select">
+                <input class="field__checkbox" type="checkbox" name="sight" value="mount-bell" id="mount-bell" checked>
+                <label class="field__name" for="mount-bell">Гора-Колокол</label>
+              </li>
+              <li class="fieldset__item field field--select">
+                <input class="field__checkbox" type="checkbox" name="sight" value="slide-park" id="slide-park" checked>
+                <label class="field__name" for="slide-park">Слайд-парк</label>
+              </li>
+              <li class="fieldset__item field field--select">
+                <input class="field__checkbox" type="checkbox" name="sight" value="red-rocks" id="red-rocks">
+                <label class="field__name" for="red-rocks">Красные скалы</label>
+              </li>
             </ul>
           </fieldset>
         </div>
 
         <!-- Эмоции-->
         <div class="form-body__inner form-body__inner--full-width">
-            <!-- ! Рефакторить БЕМ класифікацію  - бо шось воно не того!-->
+          <!-- ! Рефакторить БЕМ класифікацію  - бо шось воно не того!-->
           <div class="form-body__fieldset form-body__fieldset--comments fieldset">
             <label class="fieldset__legend">
               <h3 class="fieldset__title title">Опишите свои эмоции:</h3>
@@ -182,6 +218,7 @@
   </footer>
   <!-- FOOTER - END -->
 
+  <script src="./js/mediaquery.js"></script>
   <script src="./js/site-menu.js"></script>
 </body>
 

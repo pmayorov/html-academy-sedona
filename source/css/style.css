@@ -783,6 +783,7 @@ img {
 
 .form-body {
   display: grid;
+  grid-auto-flow: dense;
   margin: 0 auto;
   line-height: 26px;
 }
@@ -869,9 +870,117 @@ img {
 }
 
 .fieldset__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  row-gap: 20px;
+}
+.fieldset__list--two-rows {
+  row-gap: 14px;
+}
+@media (min-width: 768px) {
+  .fieldset__list--two-rows {
+    row-gap: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .fieldset--contacts .fieldset__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .fieldset--sight .fieldset__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .fieldset--sight .fieldset__list {
+    grid-template-columns: repeat(4, 201px);
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fieldset--contacts .fieldset__item:nth-child(odd) {
+    margin-right: 80px;
+  }
+}
+
+.field {
+  display: flex;
+}
+.field--two-rows {
+  flex-wrap: wrap;
+  row-gap: 5px;
+}
+.field--input {
+  column-gap: 15px;
+  align-items: baseline;
+}
+.field--select {
+  position: relative;
+  column-gap: 22px;
+  align-items: center;
+}
+.field *::placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.field__input {
+  flex-grow: 1;
+  height: 58px;
+  padding: 18px 22px 14px;
+  border: 0;
+  background-color: #f2f2f2;
+}
+
+.field__radio,
+.field__checkbox {
+  margin: 0;
+  width: 53px;
+  height: 53px;
+  opacity: 0;
+}
+
+.field--two-rows .field__name {
+  width: 100%;
+  padding-left: 22px;
+}
+.field--select .field__name {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
+}
+.field__radio + .field__name, .field__checkbox + .field__name {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 53px 1fr;
+  column-gap: 22px;
+  align-items: center;
+}
+.field__radio + .field__name::before, .field__checkbox + .field__name::before {
+  content: "";
+  width: 53px;
+  height: 53px;
+  background-color: #f2f2f2;
+}
+.field__radio + .field__name::before {
+  border-radius: 50%;
+}
+.field__radio:checked + .field__name::before, .field__checkbox:checked + .field__name::before {
+  background-color: #81b3d2;
+}
+@media (min-width: 1200px) {
+  .field__name span {
+    display: none;
+  }
 }
 
 .field__textarea {

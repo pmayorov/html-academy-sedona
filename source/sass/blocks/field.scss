@@ -1,3 +1,104 @@
+.field {
+  display: flex;
+
+  &--two-rows {
+    flex-wrap: wrap;
+    row-gap: 5px;
+  }
+
+  &--input {
+    column-gap: 15px;
+    align-items: baseline;
+  }
+
+  &--select {
+    // relative - чтобы спозиционировать кастомный radio-, checkbox- input
+    position: relative;
+    column-gap: 22px;
+    align-items: center;
+  }
+
+  & *::placeholder {
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: none;
+  }
+}
+
+// Поля INPUT
+// Для текстовых полей
+.field__input {
+  flex-grow: 1;
+  height: 58px;
+  padding: 18px 22px 14px;
+  border: 0;
+  background-color: $color-gray-f2;
+}
+
+// Для селектовых
+.field__radio,
+.field__checkbox {
+  margin: 0;
+  width: 53px;
+  height: 53px;
+  opacity: 0;
+}
+
+//  Поле LABEL
+
+.field__name {
+
+  // Подпись на всю контентную ширину в 2-строчном поле
+  .field--two-rows & {
+    width: 100%;
+    padding-left: 22px;
+  }
+
+  // Стилизация подписей в полях с селектами
+  .field--select & {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: none;
+  }
+
+  // Поле имени в грид, чтобы подключить кастомное поле INPUT через псевдоєлемент
+  .field__radio + &,
+  .field__checkbox + & {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 53px 1fr;
+    column-gap: 22px;
+    align-items: center;
+  }
+
+  // Стилизация кастомных селектов
+  .field__radio + &::before,
+  .field__checkbox + &::before {
+    content: "";
+    width: 53px;
+    height: 53px;
+    background-color: $color-gray-f2;
+  }
+
+  .field__radio + &::before {
+    border-radius: 50%;
+  }
+
+  // !DEV START
+  .field__radio:checked + &::before,
+  .field__checkbox:checked + &::before {
+    background-color: $color-basic;
+  }
+  // !DEV END
+
+  & span {
+    @media (min-width: $width-pre-desktop) {
+      display: none;
+    }
+  }
+}
+
 .field__textarea {
   width: 100%;
   height: 160px;
