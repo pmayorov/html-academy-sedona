@@ -1,5 +1,9 @@
 .form-section {
   padding-top: 36px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 65px;
+  }
 }
 
 .form-section__header {
@@ -19,6 +23,7 @@
 
   @media (min-width: $width-tablet) {
     font-size: 30px;
+    margin-bottom: 25px;
   }
 }
 
@@ -26,5 +31,7 @@
   margin: 0;
   line-height: 26px;
   // @media (max-width: $width-max-mobile) {}
-  // @media (min-width: $width-tablet) {}
+  @media (min-width: $width-tablet) {
+    margin-bottom: 87px;
+  }
 }

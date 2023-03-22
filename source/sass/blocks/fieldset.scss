@@ -1,17 +1,88 @@
 .fieldset {
-  @include outline(1px, dotted, crimson);
+  // @include outline(1px, dotted, crimson);
   position: relative;
   padding: 0;
   border: 0;
+
+  @media (max-width: $width-max-mobile) {
+    // Останавливаем расширение блока на контентной ширине (648px) планшетного вьюпорта,
+    // иначе ширина контента дергается при переходе через брекпоинт.
+
+    // !DEV - раскоментить
+    max-width: $width-tablet - 2 * $width-tablet-padding;
+  }
+
+  &--whois {
+    @media (min-width: $width-tablet) {
+      margin-left: 80px;
+      margin-bottom: 73px;
+    }
+  }
+
+  &--impress {
+    @media (min-width: $width-tablet) {
+      margin-bottom: 73px;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $width-tablet) {
+      margin-bottom: 52px;
+    }
+  }
+
+  &--sight {
+    @media (min-width: $width-tablet) {
+      margin-bottom: 71px;
+    }
+  }
+
+  &--comments {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .fieldset__legend {
+  padding: 0;
   width: 100%;
-}
 
-.fieldset__title {
-  margin: 0;
-  text-align: center;
+  // !КОСТЫЛИЩЕ
+  // Левый паддинг конкретному(!) блоку в десктопе
+  // Устал жутко - мозг не варит!
+
+  .fieldset--impress & {
+    @media (min-width: $width-pre-desktop) {
+      padding-left: 80px;
+      margin-bottom: 55px;
+    }
+  }
+
+  .fieldset--whois & {
+    margin-bottom: 19px;
+    
+    @media (min-width: $width-tablet) {
+      margin-bottom: 55px;
+    }
+  }
+
+  .fieldset--contacts & {
+    @media (min-width: $width-tablet) {
+      margin-bottom: 21px;
+    }
+  }
+
+  .fieldset--sight & {
+    @media (min-width: $width-tablet) {
+      margin-bottom: 43px;
+    }
+  }
+
+  .fieldset--comments & {
+    @media (min-width: $width-tablet) {
+      margin-bottom: 55px;
+    }
+  }
 }
 
 // Список с полями фиелдсета
@@ -46,11 +117,15 @@
     @media (min-width: $width-tablet) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      width: calc(100vw - 2 * 155px);
+      margin: 0 auto;
     }
 
     @media (min-width: $width-pre-desktop) {
-      grid-template-columns: repeat(4, 201px);
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 37px;
       justify-content: space-between;
+      width: calc($width-pre-desktop - 2 * $width-desktop-padding);
     }
   }
 }
@@ -58,6 +133,9 @@
 // Элемент списка полей фиелдсета
 .fieldset__item {
 
+  // !DEV
+  // @include outline(1px, dashed, darkgreen);
+  // !DEV
   // Контакты. Десктоп. Каждое нечетное поле (1-я колонка) - отступ справа.
   .fieldset--contacts &:nth-child(odd) {
     @media (min-width: $width-pre-desktop) {

@@ -17,28 +17,30 @@
     column-gap: 22px;
     align-items: center;
   }
-
-  & *::placeholder {
-    font-family: $font-body;
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: none;
-  }
 }
 
 // Поля INPUT
 // Для текстовых полей
 .field__input {
+  @include outline(1px, dotted, blue);
   flex-grow: 1;
+  // todo ХЗ! Когда задаю фиксированную ширину, не ломает сетку
+  // todo при малых ширинах вьюпорта (менее 400px) при заданном font-size.
+  width: 100px;
   height: 58px;
   padding: 18px 22px 14px;
   border: 0;
   background-color: $color-gray-f2;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
 }
 
 // Для селектовых
 .field__radio,
 .field__checkbox {
+  position: absolute;
   margin: 0;
   width: 53px;
   height: 53px;
@@ -65,7 +67,6 @@
   // Поле имени в грид, чтобы подключить кастомное поле INPUT через псевдоєлемент
   .field__radio + &,
   .field__checkbox + & {
-    position: absolute;
     display: grid;
     grid-template-columns: 53px 1fr;
     column-gap: 22px;
@@ -90,6 +91,7 @@
   .field__checkbox:checked + &::before {
     background-color: $color-basic;
   }
+
   // !DEV END
 
   & span {
@@ -100,6 +102,10 @@
 }
 
 .field__textarea {
-  width: 100%;
   height: 160px;
+  padding: 13px 22px 29px;
+
+  @media (min-width: $width-tablet) {
+    padding: 18px 22px 24px;
+  }
 }

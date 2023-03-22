@@ -16,8 +16,14 @@
 
 .form-body__inner {
   @media (max-width: $width-max-mobile) {
+    // !DEV раскоментить
     padding: 20px $width-mobile-padding 30px;
     border-top: 1px solid $color-gray-e5;
+
+    // Убираем нижний паддинг у последнего блока
+    &:last-of-type {
+      padding-bottom: 0;
+    }
   }
 
   &--full-width {
@@ -36,27 +42,40 @@
 
 .form-body__fieldset {
   margin: 0 auto;
+}
 
-  @media (max-width: $width-max-mobile) {
-    // Останавливаем расширение блока на контентной ширине (648px) планшетного вьюпорта,
-    // иначе ширина контента дергается при переходе через брекпоинт.
-    max-width: $width-tablet - 2 * $width-tablet-padding;
+.form-body__title {
+  margin: 0;
+  text-align: center;
+
+  @media (min-width: $width-tablet) {
+    text-align: left;
+  }
+
+  // Стилизация заголовка в широких ячейках
+  .form-body__inner--full-width & {
+    @media (min-width: $width-tablet) {
+      text-align: center;
+    }
   }
 }
 
 .form-body__submit {
+  margin: 0;
   display: grid;
 
   @media (max-width: $width-max-mobile) {
     width: calc(100vw - 2 * $width-mobile-padding);
     max-width: $width-tablet - 2 * $width-tablet-padding;
     margin: 0 auto;
+    margin-top: 51px;
   }
 
   @media (min-width: $width-tablet) {
     grid-template-columns: 1fr 1fr;
     grid-column: 1 / -1;
     justify-content: space-between;
+    margin-top: 58px;
   }
 
   & span {
@@ -68,4 +87,11 @@
       justify-self: end;
     }
   }
+}
+
+.form-body__button {
+  border: 0;
+  font-family: $font-body;
+  text-transform: uppercase;
+  padding: 18px 33px 14px;
 }
