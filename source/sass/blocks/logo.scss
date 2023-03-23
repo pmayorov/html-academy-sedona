@@ -3,7 +3,7 @@
 .logo__image {
   display: block;
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $width-pre-desktop) {
     width: 186px;
     height: auto;
   }

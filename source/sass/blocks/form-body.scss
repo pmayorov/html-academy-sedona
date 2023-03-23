@@ -16,8 +16,7 @@
 
 .form-body__inner {
   @media (max-width: $width-max-mobile) {
-    // !DEV раскоментить
-    padding: 20px $width-mobile-padding 30px;
+    padding: 20px $width-mobile-padding 27px;
     border-top: 1px solid $color-gray-e5;
 
     // Убираем нижний паддинг у последнего блока
@@ -49,6 +48,7 @@
   text-align: center;
 
   @media (min-width: $width-tablet) {
+    font-size: 21px;
     text-align: left;
   }
 
@@ -67,14 +67,14 @@
   @media (max-width: $width-max-mobile) {
     width: calc(100vw - 2 * $width-mobile-padding);
     max-width: $width-tablet - 2 * $width-tablet-padding;
-    margin: 0 auto;
-    margin-top: 51px;
+    margin: 48px auto 45px;
   }
 
   @media (min-width: $width-tablet) {
     grid-template-columns: 1fr 1fr;
     grid-column: 1 / -1;
     justify-content: space-between;
+    align-items: center;
     margin-top: 58px;
   }
 

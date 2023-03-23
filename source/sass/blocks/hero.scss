@@ -37,7 +37,8 @@
       background-position: center 95px, center bottom;
     }
 
-    @media (min-width: $width-desktop) {
+    @media (min-width: $width-pre-desktop) {
+      height: 301px;
       background-position: center 100px, center bottom;
     }
   }

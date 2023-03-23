@@ -42,6 +42,13 @@
     min-height: 330px;
     padding: 158px 38px 60px;
   }
+
+  &--eat {
+    @media (min-width: $width-tablet) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
 }
 
 .bonuses__title {

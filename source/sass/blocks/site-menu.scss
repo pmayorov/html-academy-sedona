@@ -19,7 +19,7 @@
     background-color: $color-white;
   }
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $width-pre-desktop) {
     grid-template-columns: 1fr 1fr 244px 1fr 1fr;
   }
 

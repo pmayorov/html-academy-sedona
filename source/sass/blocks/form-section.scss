@@ -2,36 +2,44 @@
   padding-top: 36px;
 
   @media (min-width: $width-tablet) {
-    padding-top: 65px;
+    padding: 61px 0 61px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding: 111px 0 61px;
   }
 }
 
 .form-section__header {
   width: calc(100vw - 2 * $width-mobile-padding);
-  max-width: 434px;
+  max-width: 436px;
   margin: 0 auto;
   text-align: center;
 }
 
 .form-section__heading {
-  margin: 0;
+  margin: 0 0 28px;
+  font-size: 18px;
   line-height: 26px;
-
-  @media (max-width: $width-max-mobile) {
-    font-size: 18px;
-  }
 
   @media (min-width: $width-tablet) {
     font-size: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 33px;
   }
+
+  // @media (min-width: $width-pre-desktop) {}
 }
 
 .form-section__lead {
-  margin: 0;
-  line-height: 26px;
-  // @media (max-width: $width-max-mobile) {}
+  margin: 0 0 17px;
+  line-height: 24px;
+
   @media (min-width: $width-tablet) {
-    margin-bottom: 87px;
+    line-height: 26px;
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 54px;
   }
 }

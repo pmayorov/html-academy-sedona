@@ -11,9 +11,9 @@
   <!-- DEV - Визуализация разметки -->
   <!-- <link rel="stylesheet" href="./css/outline.css"> -->
   <!-- <link rel="stylesheet" href="./css/markup.css"> -->
-  <!-- <link rel="stylesheet" href="./css/pixel-index.css">
+  <link rel="stylesheet" href="./css/pixel-form.css">
   <link href="./pixelglass/styles.css" rel="stylesheet">
-  <script src="./pixelglass/script.js"></script> -->
+  <script src="./pixelglass/script.js"></script>
   <!-- DEV - END -->
 
   <!-- Подключение стилей проекта -->
@@ -28,7 +28,7 @@
     <!-- Логотип -->
     <a class="header__logo header__logo--nojs logo" href="./index.html">
       <picture>
-        <source media="(min-width: 1280px)" srcset="./img/logos/sedona-big.svg">
+        <source media="(min-width: 1200px)" srcset="./img/logos/sedona-big.svg">
         <img class="logo__image" width="102" height="84" src="./img/logos/sedona-small.svg" alt="Логотип города Седона">
       </picture>
     </a>
@@ -51,7 +51,7 @@
     <!-- Промо блок -->
     <header class="hero hero--small">
       <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
-      <h2 class="visually-hidden">Мы круче, чем Гранд Каньон!</h2>
+      <p class="visually-hidden"><b>Мы круче, чем Гранд Каньон!</b></p>
     </header>
 
     <!-- Секция формы с отзывом -->
@@ -70,7 +70,7 @@
             <legend class="fieldset__legend">
               <h3 class="form-body__title title">Представьтесь:</h3>
             </legend>
-            <ul class="fieldset__list" role="none">
+            <ul class="fieldset__list fieldset__list--input" role="none">
               <li class="fieldset__item field field--input">
                 <label class="field__name">Имя*:</label>
                 <input class="field__input" type="text" name="name" placeholder="Петр" required>
@@ -87,11 +87,88 @@
           </fieldset>
         </div>
 
-        <!-- !CUT START -->
+        <!-- Контакты -->
+        <div class="form-body__inner form-body__inner--full-width">
+          <fieldset class="form-body__fieldset fieldset fieldset--contacts">
+            <legend class="fieldset__legend">
+              <h3 class="form-body__title title">Контактная информация:</h3>
+            </legend>
+            <ul class="fieldset__list fieldset__list--input fieldset__list--multirow" role="none">
+              <li class="fieldset__item field field--input field--multirow field__ico field__ico--phone">
+                <label class="field__name"><span>Контактный</span> телефон*:</label>
+                <input class="field__input" type="tel" name="phone" placeholder="Введите телефон" required>
+              </li>
+              <li class="fieldset__item field field--input field--multirow field__ico field__ico--email">
+                <label class="field__name">Электронная почта*:</label>
+                <input class="field__input" type="email" name="email" placeholder="Введите e-mail" required>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
 
+        <!-- Впечатление -->
+        <!-- <div class="form-body__inners"> -->
+        <div class="form-body__inner form-body__inner--first-cell">
+          <fieldset class="form-body__fieldset fieldset fieldset--impress">
+            <legend class="fieldset__legend">
+              <h3 class="form-body__title title">Ваше общее впечатление:</h3>
+            </legend>
+            <ul class="fieldset__list fieldset__list--radio" role="none">
+              <li class="fieldset__item field field--select">
+                <input class="field__radio" type="radio" name="impress" value="positive" id="positive" checked>
+                <label class="field__name" for="positive">Скорее положительное</label>
+              </li>
+              <li class="fieldset__item field field--select">
+                <input class="field__radio" type="radio" name="impress" value="negative" id="negative">
+                <label class="field__name" for="negative">Скорее отрицательное</label>
+              </li>
+              <li class="fieldset__item field field--select">
+                <input class="field__radio" type="radio" name="impress" value="no-answer" id="no-answer">
+                <label class="field__name" for="no-answer">Затрудняюсь ответить</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
 
+        <!-- Достопримечательности -->
+        <div class="form-body__inner form-body__inner--full-width">
+          <fieldset class="form-body__fieldset fieldset fieldset--sight">
+            <legend class="fieldset__legend">
+              <h3 class="form-body__title title">Посещенные <br> достопримечательности:</h3>
+            </legend>
+            <ul class="fieldset__list fieldset__list--checkbox" role="none">
+              <li class="fieldset__item field field--select">
+                <input class="field__checkbox" type="checkbox" name="sight" value="devil-bridge" id="devil-bridge" checked>
+                <label class="field__name" for="devil-bridge">Мост Дьявола</label>
+              </li>
+              <li class="fieldset__item field field--select">
+                <input class="field__checkbox" type="checkbox" name="sight" value="mount-bell" id="mount-bell" checked>
+                <label class="field__name" for="mount-bell">Гора-Колокол</label>
+              </li>
+              <li class="fieldset__item field field--select">
+                <input class="field__checkbox" type="checkbox" name="sight" value="slide-park" id="slide-park" checked>
+                <label class="field__name" for="slide-park">Слайд-парк</label>
+              </li>
+              <li class="fieldset__item field field--select">
+                <input class="field__checkbox" type="checkbox" name="sight" value="red-rocks" id="red-rocks">
+                <label class="field__name" for="red-rocks">Красные скалы</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
 
-        <!-- !CUT END -->
+        <!-- Эмоции-->
+        <div class="form-body__inner form-body__inner--full-width">
+          <!-- ! Рефакторить БЕМ класифікацію  - бо шось воно не того!-->
+          <div class="form-body__fieldset fieldset fieldset--comments">
+            <label class="fieldset__legend">
+              <h3 class="form-body__title title">Опишите свои эмоции:</h3>
+            </label>
+            <!-- todo Элемент field__textarea без блока -->
+            <textarea class="field__input field__textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+          </div>
+        </div>
+
 
 
         <p class="form-body__submit">
@@ -144,7 +221,7 @@
   </footer>
   <!-- FOOTER - END -->
 
-  <script src="./js/mediaquery.js"></script>
+  <!-- <script src="./js/mediaquery.js"></script> -->
   <script src="./js/site-menu.js"></script>
 </body>
 

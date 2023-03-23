@@ -1,9 +1,14 @@
 .field {
+
   display: flex;
 
-  &--two-rows {
+  &--multirow {
     flex-wrap: wrap;
     row-gap: 5px;
+
+    @media (min-width: $width-tablet) {
+      row-gap: 8px;
+    }
   }
 
   &--input {
@@ -17,15 +22,40 @@
     column-gap: 22px;
     align-items: center;
   }
+
+  // Input-поля c икнонкой
+
+  &__ico {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      width: 58px;
+      height: 58px;
+    }
+
+    &--phone::after {
+      background: $color-gray-e5 url("../../img/icons/icon-phone.svg") no-repeat center;
+    }
+
+    &--email::after {
+      background: $color-gray-e5 url("../../img/icons/icon-mail.svg") no-repeat center;
+    }
+  }
 }
 
 // Поля INPUT
 // Для текстовых полей
 .field__input {
-  @include outline(1px, dotted, blue);
   flex-grow: 1;
-  // todo ХЗ! Когда задаю фиксированную ширину, не ломает сетку
-  // todo при малых ширинах вьюпорта (менее 400px) при заданном font-size.
+  //? Вот с этой проблемой мудохался полдня!
+  //* Если width не назначить, то при малых вьюпотах инпуты не будут сжиматься и начнут
+  //* выходить за границы контентной области т.к. у инпутов по умолчанию есть фиксированная ширина.
+  // width: 100%;
+  // * Установил 100px т.к. при десктопе подпись к полю становится двустрочной :(
   width: 100px;
   height: 58px;
   padding: 18px 22px 14px;
@@ -51,10 +81,15 @@
 
 .field__name {
 
-  // Подпись на всю контентную ширину в 2-строчном поле
-  .field--two-rows & {
+  // Подпись на всю контентную ширину в многострочном поле
+  .field--multirow & {
     width: 100%;
     padding-left: 22px;
+
+    @media (min-width: $width-pre-desktop) {
+      width: auto;
+      padding-left: 0;
+    }
   }
 
   // Стилизация подписей в полях с селектами
@@ -73,9 +108,17 @@
     align-items: center;
   }
 
-  // Стилизация кастомных селектов
+  //* Стилизация кастомных селектов
+  //* Интересный вариант решения:
+  // Родителю содержащему input + label задаем display: grid - 2-е колонки - position: relative
+  // Нативный инпут position: absolute и полная прозрачность. Кастомный инпут и его чекед-состояние
+  // оформляем через псевдоэлементы и совмещаем их принудительно размещаея в 1-й ячейке 1-й строки.
+  // Позиционирование этих псевдоэлементов нативно, т.е. static.
+
   .field__radio + &::before,
   .field__checkbox + &::before {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     content: "";
     width: 53px;
     height: 53px;
@@ -86,13 +129,27 @@
     border-radius: 50%;
   }
 
-  // !DEV START
-  .field__radio:checked + &::before,
-  .field__checkbox:checked + &::before {
-    background-color: $color-basic;
+  .field__radio:checked + &::after,
+  .field__checkbox:checked + &::after {
+    content: "";
+    justify-self: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
 
-  // !DEV END
+  .field__radio:checked + &::after {
+    width: 21px;
+    height: 21px;
+    background-color: $color-gray-33;
+    border-radius: 50%;
+  }
+
+  .field__checkbox:checked + &::after {
+    width: 24px;
+    height: 24px;
+    background: url("../../img/icons/icon-tick.svg") no-repeat center;
+  }
+
 
   & span {
     @media (min-width: $width-pre-desktop) {
@@ -102,6 +159,7 @@
 }
 
 .field__textarea {
+  width: 100%;
   height: 160px;
   padding: 13px 22px 29px;
 

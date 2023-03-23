@@ -5,7 +5,7 @@
     padding-top: 44px;
   }
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $width-pre-desktop) {
     padding-top: 55px;
   }
 }
@@ -36,7 +36,7 @@
     margin-bottom: 52px;
   }
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $width-pre-desktop) {
     margin-bottom: 41px;
   }
 }
@@ -136,7 +136,7 @@
       padding: 40px 32px 32px;
     }
 
-    @media (min-width: $width-desktop) {
+    @media (min-width: $width-pre-desktop) {
       padding-top: 47px;
     }
   }
