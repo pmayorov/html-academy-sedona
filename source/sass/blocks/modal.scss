@@ -1,0 +1,134 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color-white, 0.5);
+  backdrop-filter: grayscale(20%) blur(2px);
+
+  //! DEV
+  //! row-gap: 30px;
+  //! DEV
+
+  &--off {
+    display: none
+  }
+
+}
+
+.modal__review {
+  // display: flex;
+  display: none;
+  width: 320px;
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-white;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal__review--error {
+  padding: 40px 42px 35px;
+
+  @media (min-width: $width-tablet) {
+    width: 400px;
+    padding: 53px 47px 49px;
+  }
+
+  &--off {
+    display: none
+  }
+}
+
+.modal__review--sent {
+  padding-top: 38px;
+
+  @media (min-width: $width-tablet) {
+    width: 640px;
+    padding-top: 55px;
+  }
+
+  &--off {
+    display: none
+  }
+}
+
+.modal__title {
+  margin: 0 0 24px;
+  text-align: center;
+
+  @media (min-width: $width-tablet) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal__review--sent & {
+    width: 245px;
+
+    @media (min-width: $width-tablet) {
+      width: 445px;
+    }
+  }
+}
+
+.modal__lead {
+  margin: 0;
+  line-height: 24px;
+  text-align: center;
+
+  .modal__review--error & {
+    margin-bottom: 23px;
+
+    @media (min-width: $width-tablet) {
+      margin-bottom: 36px;
+    }
+  }
+
+  .modal__review--sent & {
+    width: 245px;
+    margin-bottom: 39px;
+
+    @media (min-width: $width-tablet) {
+      width: 445px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.modal__button {
+  border: 0;
+  font-family: $font-body;
+  text-transform: uppercase;
+  padding: 18px 33px 14px;
+
+  .modal__review--error & {
+    width: 180px;
+
+    @media (min-width: $width-tablet) {
+      width: 272px;
+    }
+  }
+
+  .modal__review--sent & {
+    width: 100%;
+    max-width: 458px;
+  }
+}
+
+.modal__inner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 22px 20px;
+  background-color: $color-gray-f2;
+
+  @media (min-width: $width-tablet) {
+    padding: 44px 40px;
+  }
+}

@@ -65,6 +65,17 @@
   font-size: 18px;
   font-weight: 700;
   text-transform: none;
+
+  &:hover {
+    background-color: $color-gray-e5;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $color-white;
+    outline: 4px solid $color-gray-e5;
+    outline-offset: -4px;
+  }
 }
 
 // Для селектовых
@@ -147,9 +158,30 @@
   .field__checkbox:checked + &::after {
     width: 24px;
     height: 24px;
-    background: url("../img/icons/icon-tick.svg") no-repeat center;
+    // @include icon-tick("#a2a2a2");
+    // background: url("../img/icons/icon-tick.svg") no-repeat center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='17' fill='none'%3E%3Cpath fill='%23333' d='m22.93 1.32-1.1-1.1c-.3-.3-.9-.3-1.2 0l-11.9 11.9-6.2-6.2c-.3-.3-.9-.3-1.2 0l-1.1 1.1c-.3.3-.3.9 0 1.2l7.8 7.8c.2.2.4.2.6.2.2 0 .4-.1.6-.2l13.5-13.5c.5-.3.5-.8.2-1.2Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
+  // Активные состояния селектов
+
+  .field--select:hover &::before {
+    background-color: $color-gray-e5;
+  }
+
+  .field--select:active &::before {
+    background-color: $color-gray-d6;
+  }
+
+  .field--select:active .field__radio + &::after {
+    background-color: rgba($color-gray-33, 0.3);
+  }
+
+  .field--select:active .field__checkbox + &::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='17' fill='none'%3E%3Cpath fill='%23333' fill-opacity='0.3' d='m22.93 1.32-1.1-1.1c-.3-.3-.9-.3-1.2 0l-11.9 11.9-6.2-6.2c-.3-.3-.9-.3-1.2 0l-1.1 1.1c-.3.3-.3.9 0 1.2l7.8 7.8c.2.2.4.2.6.2.2 0 .4-.1.6-.2l13.5-13.5c.5-.3.5-.8.2-1.2Z'/%3E%3C/svg%3E");
+  }
 
   & span {
     @media (min-width: $width-pre-desktop) {

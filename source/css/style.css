@@ -1113,6 +1113,14 @@ img {
   font-weight: 700;
   text-transform: none;
 }
+.field__input:hover {
+  background-color: #e5e5e5;
+}
+.field__input:active, .field__input:focus {
+  background-color: #ffffff;
+  outline: 4px solid #e5e5e5;
+  outline-offset: -4px;
+}
 
 .field__radio,
 .field__checkbox {
@@ -1170,7 +1178,21 @@ img {
 .field__checkbox:checked + .field__name::after {
   width: 24px;
   height: 24px;
-  background: url("../img/icons/icon-tick.svg") no-repeat center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='17' fill='none'%3E%3Cpath fill='%23333' d='m22.93 1.32-1.1-1.1c-.3-.3-.9-.3-1.2 0l-11.9 11.9-6.2-6.2c-.3-.3-.9-.3-1.2 0l-1.1 1.1c-.3.3-.3.9 0 1.2l7.8 7.8c.2.2.4.2.6.2.2 0 .4-.1.6-.2l13.5-13.5c.5-.3.5-.8.2-1.2Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.field--select:hover .field__name::before {
+  background-color: #e5e5e5;
+}
+.field--select:active .field__name::before {
+  background-color: #d6d6d6;
+}
+.field--select:active .field__radio + .field__name::after {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+.field--select:active .field__checkbox + .field__name::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='17' fill='none'%3E%3Cpath fill='%23333' fill-opacity='0.3' d='m22.93 1.32-1.1-1.1c-.3-.3-.9-.3-1.2 0l-11.9 11.9-6.2-6.2c-.3-.3-.9-.3-1.2 0l-1.1 1.1c-.3.3-.3.9 0 1.2l7.8 7.8c.2.2.4.2.6.2.2 0 .4-.1.6-.2l13.5-13.5c.5-.3.5-.8.2-1.2Z'/%3E%3C/svg%3E");
 }
 @media (min-width: 1200px) {
   .field__name span {
@@ -1291,5 +1313,136 @@ img {
 }
 .html-academy:active .html-academy__logo {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: grayscale(20%) blur(2px);
+          backdrop-filter: grayscale(20%) blur(2px);
+}
+.modal--off {
+  display: none;
+}
+
+.modal__review {
+  display: none;
+  width: 320px;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal__review--error {
+  padding: 40px 42px 35px;
+}
+@media (min-width: 768px) {
+  .modal__review--error {
+    width: 400px;
+    padding: 53px 47px 49px;
+  }
+}
+.modal__review--error--off {
+  display: none;
+}
+
+.modal__review--sent {
+  padding-top: 38px;
+}
+@media (min-width: 768px) {
+  .modal__review--sent {
+    width: 640px;
+    padding-top: 55px;
+  }
+}
+.modal__review--sent--off {
+  display: none;
+}
+
+.modal__title {
+  margin: 0 0 24px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.modal__review--sent .modal__title {
+  width: 245px;
+}
+@media (min-width: 768px) {
+  .modal__review--sent .modal__title {
+    width: 445px;
+  }
+}
+
+.modal__lead {
+  margin: 0;
+  line-height: 24px;
+  text-align: center;
+}
+.modal__review--error .modal__lead {
+  margin-bottom: 23px;
+}
+@media (min-width: 768px) {
+  .modal__review--error .modal__lead {
+    margin-bottom: 36px;
+  }
+}
+.modal__review--sent .modal__lead {
+  width: 245px;
+  margin-bottom: 39px;
+}
+@media (min-width: 768px) {
+  .modal__review--sent .modal__lead {
+    width: 445px;
+    margin-bottom: 50px;
+  }
+}
+
+.modal__button {
+  border: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+  padding: 18px 33px 14px;
+}
+.modal__review--error .modal__button {
+  width: 180px;
+}
+@media (min-width: 768px) {
+  .modal__review--error .modal__button {
+    width: 272px;
+  }
+}
+.modal__review--sent .modal__button {
+  width: 100%;
+  max-width: 458px;
+}
+
+.modal__inner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 22px 20px;
+  background-color: #f2f2f2;
+}
+@media (min-width: 768px) {
+  .modal__inner {
+    padding: 44px 40px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
