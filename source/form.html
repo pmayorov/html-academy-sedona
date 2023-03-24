@@ -157,19 +157,16 @@
           </fieldset>
         </div>
 
-        <!-- Эмоции-->
+        <!-- Отзыв -->
         <div class="form-body__inner form-body__inner--full-width">
-          <!-- ! Рефакторить БЕМ класифікацію  - бо шось воно не того!-->
           <div class="form-body__fieldset fieldset fieldset--comments">
-            <label class="fieldset__legend">
-              <h3 class="form-body__title title">Опишите свои эмоции:</h3>
-            </label>
-            <!-- todo Элемент field__textarea без блока -->
-            <textarea class="field__input field__textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+            <h3 class="fieldset__legend form-body__title title">Опишите свои эмоции:</h3>
+            <div class="field">
+              <label class="visually-hidden" for="comments">Отзыв</label>
+              <textarea class="field__input field__textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+            </div>
           </div>
         </div>
-
-
 
         <p class="form-body__submit">
           <button class="form-body__button button" type="submit">Отправить отзыв</button>

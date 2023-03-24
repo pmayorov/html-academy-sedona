@@ -38,11 +38,11 @@
     }
 
     &--phone::after {
-      background: $color-gray-e5 url("../../img/icons/icon-phone.svg") no-repeat center;
+      background: $color-gray-e5 url("../img/icons/icon-phone.svg") no-repeat center;
     }
 
     &--email::after {
-      background: $color-gray-e5 url("../../img/icons/icon-mail.svg") no-repeat center;
+      background: $color-gray-e5 url("../img/icons/icon-mail.svg") no-repeat center;
     }
   }
 }
@@ -147,7 +147,7 @@
   .field__checkbox:checked + &::after {
     width: 24px;
     height: 24px;
-    background: url("../../img/icons/icon-tick.svg") no-repeat center;
+    background: url("../img/icons/icon-tick.svg") no-repeat center;
   }
 
 
