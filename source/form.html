@@ -90,7 +90,7 @@
         <!-- Контакты -->
         <div class="form-body__inner form-body__inner--full-width">
           <fieldset class="form-body__fieldset fieldset fieldset--contacts">
-            <legend class="fieldset__legend">
+            <legend class="fieldset__legend fieldset__legend--decorline">
               <h3 class="form-body__title title">Контактная информация:</h3>
             </legend>
             <ul class="fieldset__list fieldset__list--input fieldset__list--multirow" role="none">
@@ -133,8 +133,12 @@
         <!-- Достопримечательности -->
         <div class="form-body__inner form-body__inner--full-width">
           <fieldset class="form-body__fieldset fieldset fieldset--sight">
-            <legend class="fieldset__legend">
-              <h3 class="form-body__title title">Посещенные <br> достопримечательности:</h3>
+            <!-- todo Декортаивная линия, но общая реализация неправильная!
+                В мобильной версии она прописана в классе form-body__inner и отображается над ВСЕМИ фиелдсетами и растягивается на 100% экрана.
+                В планшетной мы ее реализуем в legend, т.к. ее надо центрировать по отношению к заголовку.
+                Скорее всего надо рефакторить часть код в мобильной стилизации. -->
+            <legend class="fieldset__legend fieldset__legend--decorline">
+              <h3 class="form-body__title title">Посещенные достопримечательности:</h3>
             </legend>
             <ul class="fieldset__list fieldset__list--checkbox" role="none">
               <li class="fieldset__item field field--select">
@@ -160,7 +164,9 @@
         <!-- Отзыв -->
         <div class="form-body__inner form-body__inner--full-width">
           <div class="form-body__fieldset fieldset fieldset--comments">
-            <h3 class="fieldset__legend form-body__title title">Опишите свои эмоции:</h3>
+            <div class="fieldset__legend fieldset__legend--decorline">
+              <h3 class="form-body__title title">Опишите свои эмоции:</h3>
+            </div>
             <div class="field">
               <label class="visually-hidden" for="comments">Отзыв</label>
               <textarea class="field__input field__textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>

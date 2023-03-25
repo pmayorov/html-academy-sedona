@@ -14,6 +14,7 @@
   // @media (min-width: $width-pre-desktop) {  }
 }
 
+// Обертка для фиелдсетов
 .form-body__inner {
   @media (max-width: $width-max-mobile) {
     padding: 20px $width-mobile-padding 27px;
@@ -26,6 +27,8 @@
   }
 
   &--full-width {
+    position: relative;
+
     @media (min-width: $width-tablet) {
       grid-column: 1 / -1;
     }
@@ -46,6 +49,7 @@
 .form-body__title {
   margin: 0;
   text-align: center;
+  background-color: $color-white;
 
   @media (min-width: $width-tablet) {
     font-size: 21px;
@@ -53,7 +57,13 @@
   }
 
   // Стилизация заголовка в широких ячейках
+  // Устанавливаем position - чтобы заголовок становился над полосой
+
   .form-body__inner--full-width & {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+
     @media (min-width: $width-tablet) {
       text-align: center;
     }

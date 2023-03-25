@@ -140,33 +140,34 @@
     border-radius: 50%;
   }
 
-  .field__radio:checked + &::after,
-  .field__checkbox:checked + &::after {
+  // Чтобы уже при выборе элемента и до отпускания кнопки появилась метка
+  // формирую псевдоэлементы сразу (до аактивного состояния). И уже при его наступлении
+  // делаю псевдоэлементы видимыми согласно параметров указанных в стайлгайде.
+
+  .field__radio + &::after,
+  .field__checkbox + &::after {
     content: "";
     justify-self: center;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
 
-  .field__radio:checked + &::after {
+  .field__radio + &::after {
     width: 21px;
     height: 21px;
-    background-color: $color-gray-33;
     border-radius: 50%;
   }
 
+  .field__radio:checked + &::after {
+    background-color: $color-gray-33;
+  }
+
+  // icon-tick("fill: #333", "fill-opacity: default = 1"); где %23 ---> #
   .field__checkbox:checked + &::after {
-    width: 24px;
-    height: 24px;
-    // @include icon-tick("#a2a2a2");
-    // background: url("../img/icons/icon-tick.svg") no-repeat center;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='17' fill='none'%3E%3Cpath fill='%23333' d='m22.93 1.32-1.1-1.1c-.3-.3-.9-.3-1.2 0l-11.9 11.9-6.2-6.2c-.3-.3-.9-.3-1.2 0l-1.1 1.1c-.3.3-.3.9 0 1.2l7.8 7.8c.2.2.4.2.6.2.2 0 .4-.1.6-.2l13.5-13.5c.5-.3.5-.8.2-1.2Z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
+    @include icon-tick("%23333");
   }
 
   // Активные состояния селектов
-
   .field--select:hover &::before {
     background-color: $color-gray-e5;
   }
@@ -175,12 +176,16 @@
     background-color: $color-gray-d6;
   }
 
+  // todo Дофига специфичности, но по другому не смог :(
+  // todo Рефакторить пока нет сил. Надо пересматривать БЭМ-разметку.
+
   .field--select:active .field__radio + &::after {
     background-color: rgba($color-gray-33, 0.3);
   }
 
+  // fill: #333, fill-opacity: 0.3
   .field--select:active .field__checkbox + &::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='17' fill='none'%3E%3Cpath fill='%23333' fill-opacity='0.3' d='m22.93 1.32-1.1-1.1c-.3-.3-.9-.3-1.2 0l-11.9 11.9-6.2-6.2c-.3-.3-.9-.3-1.2 0l-1.1 1.1c-.3.3-.3.9 0 1.2l7.8 7.8c.2.2.4.2.6.2.2 0 .4-.1.6-.2l13.5-13.5c.5-.3.5-.8.2-1.2Z'/%3E%3C/svg%3E");
+    @include icon-tick("%23333", "0.3");
   }
 
   & span {

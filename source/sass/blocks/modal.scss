@@ -12,25 +12,19 @@
   background-color: rgba($color-white, 0.5);
   backdrop-filter: grayscale(20%) blur(2px);
 
-  //! DEV
-  //! row-gap: 30px;
-  //! DEV
-
   &--off {
-    display: none
+    display: none;
   }
-
 }
 
 .modal__review {
-  // display: flex;
   display: none;
   width: 320px;
   height: fit-content;
   flex-direction: column;
   align-items: center;
   background-color: $color-white;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .modal__review--error {
@@ -42,7 +36,7 @@
   }
 
   &--off {
-    display: none
+    display: none;
   }
 }
 
@@ -55,7 +49,7 @@
   }
 
   &--off {
-    display: none
+    display: none;
   }
 }
 
