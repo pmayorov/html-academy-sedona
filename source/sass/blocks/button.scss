@@ -18,7 +18,7 @@
     outline: 3px solid $color-focus;
   }
 
-  &--disabled {
+  &:disabled {
     pointer-events: none;
     color: $color-white;
     background-color: $color-gray-e5;

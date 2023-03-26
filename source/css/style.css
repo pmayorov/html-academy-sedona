@@ -61,7 +61,7 @@ img {
 .button:focus-visible {
   outline: 3px solid #dd890c;
 }
-.button--disabled {
+.button:disabled {
   pointer-events: none;
   color: #ffffff;
   background-color: #e5e5e5;
@@ -1169,6 +1169,7 @@ img {
   }
 }
 .field--select .field__name {
+  width: 100%;
   font-size: 18px;
   font-weight: 700;
   text-transform: none;
