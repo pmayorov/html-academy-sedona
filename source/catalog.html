@@ -11,7 +11,7 @@
   <!-- DEV - Визуализация разметки -->
   <!-- <link rel="stylesheet" href="./css/outline.css"> -->
   <!-- <link rel="stylesheet" href="./css/markup.css"> -->
-  <!-- <link rel="stylesheet" href="./css/pixel-index.css">
+  <!-- <link rel="stylesheet" href="./css/pixel-catalog.css">
   <link href="./pixelglass/styles.css" rel="stylesheet">
   <script src="./pixelglass/script.js"></script> -->
   <!-- DEV - END -->
@@ -24,11 +24,10 @@
 
   <!-- CATALOG - HEADER -->
   <header class="page__header header">
-
     <!-- Логотип -->
     <a class="header__logo header__logo--nojs logo" href="./index.html">
       <picture>
-        <source media="(min-width: 1280px)" srcset="./img/logos/sedona-big.svg">
+        <source media="(min-width: 1200px)" srcset="./img/logos/sedona-big.svg">
         <img class="logo__image" width="102" height="84" src="./img/logos/sedona-small.svg" alt="Логотип города Седона">
       </picture>
     </a>
@@ -46,115 +45,144 @@
   <!-- HEADER - END -->
 
   <!-- INDEX - MAIN -->
-  <main class="page__main main">
+  <main class="page__main main catalog">
 
     <!-- Промо блок -->
     <header class="hero hero--small">
       <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
-      <h2 class="visually-hidden">Мы круче, чем Гранд Каньон!</h2>
+      <p class="visually-hidden"><b>Мы круче, чем Гранд Каньон!</b></p>
     </header>
 
-    <!-- Секция с преимуществами -->
-    <section class="">
-      <h2 class="visually-hidden">Наш фотоальбом</h2>
-      <p class="">Фото и видео</p>
-      <p class="">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+    <!-- Секция фото -->
+    <section class="catalog__gallery gallery">
+
+      <!-- Заголовок фото -->
+
+      <div class="catalog__header">
+        <h2 class="catalog__heading title">Фото и видео</h2>
+        <p class="catalog__lead">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      </div>
+
       <!-- Фотогалерея -->
-      <ul class="">
+      <ul class="catalog__list gallery__list">
+
         <!-- Фото #1 -->
-        <li class="">
-          <img class="" width="280" height="280" src="./img/catalog/catalog-1-mobile.jpg" alt="Неродные просторы">
-          <div class="">
-            <p class="">Неродные просторы</p>
-            <p class="">Автор фото: Борис</p>
-            <button class=""><span class="visually-hidden">Мне нравится!</span></button>
-            <p class=""><span class="visually-hidden">Количество лайков:</span>1350</p>
+        <li class="gallery__item gallery__item--big">
+          <img class="gallery__image" width="280" height="280" src="./img/catalog/catalog-1-mobile.jpg" alt="Неродные просторы">
+          <div class="gallery__desc">
+            <p class="gallery__subtitle">Неродные просторы</p>
+            <p class="gallery__author">Автор фото: Борис</p>
+            <div class="gallery__likes">
+              <button class="gallery__likes-btn"><span class="visually-hidden">Мне нравится!</span></button>
+              <p class="gallery__likes-sum"><span class="visually-hidden">Количество лайков:</span>1350</p>
+            </div>
           </div>
         </li>
+
         <!-- Фото #2 -->
-        <li class="">
-          <img class="" width="280" height="280" src="./img/catalog/catalog-2-mobile.jpg" alt="Местная растительность">
-          <div class="">
-            <p class="">Местная растительность</p>
-            <p class="">Автор фото: Сергей</p>
-            <button class=""><span class="visually-hidden">Мне нравится!</span></button>
-            <p class=""><span class="visually-hidden">Количество лайков:</span>143</p>
+        <li class="gallery__item">
+          <img class="gallery__image" width="280" height="280" src="./img/catalog/catalog-2-mobile.jpg" alt="Местная растительность">
+          <div class="gallery__desc">
+            <p class="gallery__subtitle">Местная растительность</p>
+            <p class="gallery__author">Автор фото: Сергей</p>
+            <div class="gallery__likes">
+              <button class="gallery__likes-btn"><span class="visually-hidden">Мне нравится!</span></button>
+              <p class="gallery__likes-sum"><span class="visually-hidden">Количество лайков:</span>143</p>
+            </div>
           </div>
         </li>
+
         <!-- Фото #3 -->
-        <li class="">
-          <img class="" width="280" height="280" src="./img/catalog/catalog-3-mobile.jpg" alt="Дорога на север">
-          <div class="">
-            <p class="">Дорога на север</p>
-            <p class="">Автор фото: Петр</p>
-            <button class=""><span class="visually-hidden">Мне нравится!</span></button>
-            <p class=""><span class="visually-hidden">Количество лайков:</span>98</p>
+        <li class="gallery__item">
+          <img class="gallery__image" width="280" height="280" src="./img/catalog/catalog-3-mobile.jpg" alt="Дорога на север">
+          <div class="gallery__desc">
+            <p class="gallery__subtitle">Дорога на север</p>
+            <p class="gallery__author">Автор фото: Петр</p>
+            <div class="gallery__likes">
+              <button class="gallery__likes-btn"><span class="visually-hidden">Мне нравится!</span></button>
+              <p class="gallery__likes-sum"><span class="visually-hidden">Количество лайков:</span>98</p>
+            </div>
           </div>
         </li>
+
         <!-- Фото #4 -->
-        <li class="">
-          <img class="" width="280" height="280" src="./img/catalog/catalog-4-mobile.jpg" alt="Мост дьявола">
-          <div class="">
-            <p class="">Мост дьявола</p>
-            <p class="">Автор фото: Антон</p>
-            <button class=""><span class="visually-hidden">Мне нравится!</span></button>
-            <p class=""><span class="visually-hidden">Количество лайков:</span>254</p>
+        <li class="gallery__item">
+          <img class="gallery__image" width="280" height="280" src="./img/catalog/catalog-4-mobile.jpg" alt="Мост дьявола">
+          <div class="gallery__desc">
+            <p class="gallery__subtitle">Мост дьявола</p>
+            <p class="gallery__author">Автор фото: Антон</p>
+            <div class="gallery__likes">
+              <button class="gallery__likes-btn"><span class="visually-hidden">Мне нравится!</span></button>
+              <p class="gallery__likes-sum"><span class="visually-hidden">Количество лайков:</span>254</p>
+            </div>
           </div>
         </li>
       </ul>
     </section>
 
-    <section class="">
-      <h2 class="visually-hidden">Наша видеопрезентация</h2>
-      <p class="">Все еще сомневаетесь?</p>
-      <p class="">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-      <img class="" width="320" height="201" src="./img/catalog/catalog-video-mobile.jpg" alt="Видеопрезентация">
-      <div class="">
-        <input class="" type="range">
-        <button class=""><span class="visually-hidden">Повтор</span></button>
-        <button class=""><span class="visually-hidden">Весь экран</span></button>
-        <button class=""><span class="visually-hidden">Субтитры</span></button>
+    <!-- Секция видео -->
+    <section class="catalog__video video">
+
+      <!-- Заголовок видео -->
+      <div class="catalog__header">
+        <h2 class="visually-hidden">Наша видеопрезентация</h2>
+        <p class="catalog__heading title">Все еще сомневаетесь?</p>
+        <p class="catalog__lead">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+      </div>
+
+      <!-- Видеоконтент -->
+      <div class="video__content">
+        <img class="video__image" width="320" height="201" src="./img/catalog/catalog-video-mobile.jpg" alt="Видеопрезентация">
+        <!-- Видео контролы -->
+        <div class="video__control control-panel">
+          <div class="control-panel__volume-holder"><input class="control-panel__volume" type="range"></div>
+          <button class="control-panel__btn control-panel__btn--replay"><span class="visually-hidden">Повтор</span></button>
+          <button class="control-panel__btn control-panel__btn--subtitles"><span class="visually-hidden">Субтитры</span></button>
+          <button class="control-panel__btn control-panel__btn--fullscreen"><span class="visually-hidden">Весь экран</span></button>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- FOOTER - START -->
   <footer class="page__footer footer">
-    <!-- Хештег Седоны-->
-    <a class="footer__hashtag title" href="#">#Visitsedona</a>
-    <!-- Меню соцсетей -->
-    <ul class="footer__list socials">
-      <li class="footer__item">
-        <a class="socials__link social__link--twitter" href="#">
-          <span class="visually-hidden">Twitter</span>
-          <svg width="18" height="15" aria-hidden="true">
-            <use xlink:href="./img/icons/sprite.svg#twitter"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="footer__item">
-        <a class="socials__link social__link--facebook" href="#">
-          <span class="visually-hidden">Facebook</span>
-          <svg width="9" height="19" aria-hidden="true">
-            <use xlink:href="./img/icons/sprite.svg#facebook"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="footer__item">
-        <a class="socials__link social__link--youtube" href="#">
-          <span class="visually-hidden">YouTube</span>
-          <svg width="20" height="14" aria-hidden="true">
-            <use xlink:href="./img/icons/sprite.svg#youtube"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-    <!-- Логотип академии -->
-    <a class="footer__copyright html-academy" href="https://htmlacademy.org/">Разработано
-      <svg class="html-academy__logo" width="27" height="34" role="img" aria-hidden="true">
-        <use xlink:href="./img/icons/sprite.svg#html-academy"></use>
-      </svg>
-    </a>
+    <div class="footer__inner container">
+      <!-- Хештег Седоны-->
+      <a class="footer__hashtag title" href="#">#Visitsedona</a>
+      <!-- Меню соцсетей -->
+      <ul class="footer__list socials">
+        <li class="footer__item">
+          <a class="socials__link social__link--twitter" href="#">
+            <span class="visually-hidden">Twitter</span>
+            <svg width="18" height="15" aria-hidden="true">
+              <use xlink:href="./img/icons/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="socials__link social__link--facebook" href="#">
+            <span class="visually-hidden">Facebook</span>
+            <svg width="9" height="19" aria-hidden="true">
+              <use xlink:href="./img/icons/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="socials__link social__link--youtube" href="#">
+            <span class="visually-hidden">YouTube</span>
+            <svg width="20" height="14" aria-hidden="true">
+              <use xlink:href="./img/icons/sprite.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <!-- Логотип академии -->
+      <a class="footer__copyright html-academy" href="https://htmlacademy.org/">Разработано
+        <svg class="html-academy__logo" width="27" height="34" role="img" aria-hidden="true">
+          <use xlink:href="./img/icons/sprite.svg#html-academy"></use>
+        </svg>
+      </a>
+    </div>
   </footer>
   <!-- FOOTER - END -->
 

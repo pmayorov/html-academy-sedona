@@ -13,8 +13,15 @@
 .advantages__header {
   width: calc(100vw - 2 * $width-mobile-padding);
   max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 12px;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 41px;
+  }
 }
 
 .advantages__heading {
@@ -27,18 +34,10 @@
 }
 
 .advantages__lead {
-  margin: 0 0 12px;
+  margin: 0;
   text-align: center;
   line-height: 26px;
   color: $color-gray-33;
-
-  @media (min-width: $width-tablet) {
-    margin-bottom: 52px;
-  }
-
-  @media (min-width: $width-pre-desktop) {
-    margin-bottom: 41px;
-  }
 }
 
 // Список преимуществ
@@ -96,18 +95,18 @@
   // Малая карточка списка преимуществ
   &--small {
 
-    // Линии над малыми карточками. Над каждой, кроме 1-й в мобилке
-    & + &::before {
-      @media (max-width: $width-max-mobile) {
-        @include topline();
+    // Линии над малыми карточками.
+    // Мобильный. Над каждой, кроме 1-й.
+    @media (max-width: $width-max-mobile) {
+      & + &::before {
+        @include advantages__line-divider();
       }
     }
 
-    // Линии над малыми карточкасм. Над всеми после 1-го ряда (3-го по счету блока) в планшете+
-    // !Костыль (n+6) - при изменении кол-ва карточек над ним перед поплывет правило
-    &::before {
-      @media (min-width: $width-tablet) {
-        @include topline();
+    // Планшет. Над каждой после 3-й (исключаем 1-й ряд)
+    @media (min-width: $width-tablet) {
+      & + & + & + &::before {
+        @include advantages__line-divider();
       }
     }
   }

@@ -1,0 +1,183 @@
+.gallery {
+  padding-top: 31px;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 62px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding-top: 99px;
+  }
+}
+
+.gallery__list {
+  display: grid;
+  width: calc(100vw - 2 * $width-mobile-padding);
+  max-width: 648px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: calc(100vw - 2 * $width-tablet-padding);
+    max-width: $width-pre-desktop;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $width-max-mobile) {
+    padding: 23px 0 16px;
+    row-gap: 11px;
+  }
+
+  @media (min-width: $width-tablet) {
+    background-color: $color-gray-f2;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    color: $color-white;
+  }
+
+  // Декоративные разделители между элементами списка в мобильном вьюпорте
+  // Оформляю абсолютно позиционированными псевдоэлементами по отношению
+  // к относительно позиционированному элементу списка фотографий.
+
+  // * Ширина линии на 100% вьюпорта обеспечиватеся левым (left) и правым (right)
+  // * отрицательным отступам равными по величине планшетных паддингов от края вьюпорта.
+
+  &::before {
+    @media (max-width: $width-max-mobile) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -1 * $width-tablet-padding;
+      right: -1 * $width-tablet-padding;
+      height: 1px;
+      background-color: $color-gray-e5;
+    }
+  }
+
+  &:last-of-type::after {
+    @media (max-width: $width-max-mobile) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -1 * $width-tablet-padding;
+      right: -1 * $width-tablet-padding;
+      height: 1px;
+      background-color: $color-gray-e5;
+    }
+  }
+
+  &--big {
+    @media (min-width: $width-tablet) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.gallery__desc {
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content min-content;
+    padding: 17px 30px 15px 22px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba($color-black, 0.3);
+  }
+}
+
+.gallery__image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+
+  @media (min-width: $width-tablet) {
+    height: 267px;
+  }
+
+  .gallery__item--big & {
+    @media (min-width: $width-tablet) {
+      height: 400px;
+    }
+  }
+}
+
+.gallery__subtitle {
+  margin: 0;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.gallery__author {
+  margin: 0;
+  line-height: 24px;
+  text-transform: none;
+}
+
+.gallery__likes {
+  display: flex;
+  column-gap: 14px;
+
+  // Отступ лайк-секции в мобильной версии от остального контента
+  @media (max-width: $width-max-mobile) {
+    margin-top: 13px;
+  }
+
+  @media (min-width: $width-tablet) {
+    align-self: center;
+    justify-self: end;
+    grid-column: 2;
+    grid-row: 1 / -1;
+  }
+}
+
+.gallery__likes-btn {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  width: 23px;
+  height: 21px;
+  background-color: rgba($color-black, 0.3);
+  mask-image: url("../img/icons/icon-like.svg");
+
+  @media (min-width: $width-pre-desktop) {
+    background-color: $color-white;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($color-btn-hover, 0.3);
+
+    @media (min-width: $width-pre-desktop) {
+      background-color: rgba($color-white, 0.5);
+    }
+  }
+
+  &:active {
+    // cursor: pointer;
+    background-color: $color-btn-hover;
+  }
+}
+
+.gallery__likes-sum {
+  margin: 0;
+  font-weight: 700;
+  line-height: 24px;
+}

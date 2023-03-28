@@ -1,0 +1,190 @@
+.control-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 66px 1fr 48px 66px;
+  grid-template-areas: "a b c d";
+  align-items: center;
+  justify-items: center;
+  width: calc(100vw - 2 * $width-mobile-padding);
+  max-width: 648px;
+  height: 66px;
+  background-color: $color-gray-f2;
+
+  @media (min-width: $width-tablet) {
+    position: absolute;
+    bottom: 0;
+    grid-template-columns: 93px 1fr 72px 93px;
+    width: calc(100vw - 2 * $width-tablet-padding);
+    max-width: 800px;
+    height: 93px;
+    background-color: rgba($color-black, 0.6);
+  }
+}
+
+// Контейнер для input-регулятора громкости
+.control-panel__volume-holder {
+  position: absolute;
+  top: -45px;
+  display: flex;
+  justify-items: center;
+  width: calc(100vw - 2 * $width-mobile-padding);
+  max-width: 648px;
+  height: 45px;
+  padding: 0 23px;
+  background-color: rgba($color-black, 0.6);
+
+  @media (min-width: $width-tablet) {
+    position: static;
+    width: 100%;
+    max-width: none;
+    height: fit-content;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+//* Кнопки управления видео панелью
+// Стилизация цвета активных состояний оформляется
+// через маскирование и смену фонового цвета
+
+.control-panel__btn {
+  border: 0;
+  padding: 0;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $color-icon-video-panel;
+
+  @media (min-width: $width-tablet) {
+    background-color: $color-white;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-gray-33;
+
+    @media (min-width: $width-tablet) {
+      background-color: rgba($color-white, 0.6);
+    }
+  }
+
+  &:active {
+    cursor: pointer;
+    background-color: rgba($color-gray-33, 0.3);
+
+    @media (min-width: $width-tablet) {
+      background-color: rgba($color-white, 0.3);
+    }
+  }
+
+  // Кнопка - повтор
+  &--replay {
+    width: 16px;
+    height: 20px;
+    grid-area: a;
+    mask-image: url("../img/icons/icon-replay.svg");
+  }
+
+  // Кнопка - полный экран
+  &--fullscreen {
+    grid-area: d;
+    width: 32px;
+    height: 30px;
+    mask-image: url("../img/icons/icon-fullscreen.svg");
+  }
+
+  // Кнопка - субтитры
+  &--subtitles {
+    grid-area: c;
+    width: 32px;
+    height: 30px;
+    mask-image: url("../img/icons/icon-subtitles.svg");
+
+    @media (min-width: $width-tablet) {
+      justify-self: end;
+    }
+  }
+}
+
+
+// СТИЛИЗАЦИЯ ПОЛЗУНКА RANGE
+
+// Для браузеров webkit (google chrome, chromium) используются псевдоселекторы
+
+// ::-webkit-slider-runnable-track
+// ::-webkit-slider-thumb
+
+// а для mozilla firefox
+
+// ::-moz-range-track
+// ::-moz-range-thumb
+
+// Где:
+// -track - полоса ползунка
+// -thumb – элемент ползунка
+
+
+// Регулятор громкости
+
+
+.control-panel__volume {
+  appearance: none;
+  width: 100%;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+//* Стилизация ползунка
+
+// Chrome - Edge - Opera
+.control-panel__volume::-moz-range-track {
+  height: 3px;
+  background-color: rgba($color-white, 0.2);
+}
+
+// Firefox
+// Если объединить два селектора через "," то правило для -webkit не срабатывает.
+.control-panel__volume::-webkit-slider-runnable-track {
+  height: 3px;
+  background-color: rgba($color-white, 0.2);
+}
+
+//* Стилизация кнопки
+// Chrome - Edge - Opera
+.control-panel__volume::-webkit-slider-thumb {
+  appearance: none;
+  margin-top: -4px;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: $color-white;
+
+  &:hover {
+    background-color: rgba($color-white, 0.6);
+  }
+
+  &:active {
+    background-color: $color-btn-active;
+  }
+}
+
+// Firefox
+.control-panel__volume::-moz-range-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: $color-white;
+  // box-sizing: border-box;
+
+  &:hover {
+    background-color: rgba($color-white, 0.6);
+  }
+
+  &:active {
+    background-color: $color-btn-active;
+  }
+}

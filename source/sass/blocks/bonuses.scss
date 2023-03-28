@@ -29,11 +29,6 @@
 }
 
 .bonuses__item {
-
-  // DEV - START!
-  // @include outline(1px, dotted, mediumslateblue);
-  // DEV - END!
-
   @media (max-width: $width-max-mobile) {
     padding-left: 52px;
   }

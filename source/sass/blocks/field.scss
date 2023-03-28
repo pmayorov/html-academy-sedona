@@ -49,6 +49,7 @@
 
 // Поля INPUT
 // Для текстовых полей
+
 .field__input {
   flex-grow: 1;
   //? Вот с этой проблемой мудохался полдня!
@@ -112,8 +113,7 @@
   }
 
   // Поле имени в грид, чтобы подключить кастомное поле INPUT через псевдоєлемент
-  .field__radio + &,
-  .field__checkbox + & {
+  :where(.field__radio, .field__checkbox) + & {
     display: grid;
     grid-template-columns: 53px 1fr;
     column-gap: 22px;
@@ -127,11 +127,10 @@
   // оформляем через псевдоэлементы и совмещаем их принудительно размещаея в 1-й ячейке 1-й строки.
   // Позиционирование этих псевдоэлементов нативно, т.е. static.
 
-  .field__radio + &::before,
-  .field__checkbox + &::before {
+  :where(.field__radio, .field__checkbox) + &::before {
+    content: "";
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    content: "";
     width: 53px;
     height: 53px;
     background-color: $color-gray-f2;
@@ -145,11 +144,10 @@
   }
 
   // Чтобы уже при выборе элемента и до отпускания кнопки появилась метка
-  // формирую псевдоэлементы сразу (до аактивного состояния). И уже при его наступлении
+  // формирую псевдоэлементы сразу (до активного состояния). И уже при его наступлении
   // делаю псевдоэлементы видимыми согласно параметров указанных в стайлгайде.
 
-  .field__radio + &::after,
-  .field__checkbox + &::after {
+  :where(.field__radio, .field__checkbox) + &::after {
     content: "";
     justify-self: center;
     grid-column: 1 / 2;
@@ -165,33 +163,40 @@
     border-radius: 50%;
   }
 
-  .field__radio:checked + &::after {
-    background-color: $color-gray-33;
+  .field__checkbox + &::after {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    mask: url("../img/icons/icon-tick.svg") no-repeat center;
   }
 
-  // icon-tick("fill: #333", "fill-opacity: default = 1"); где %23 ---> #
-  .field__checkbox:checked + &::after {
-    @include icon-tick("%23333");
-  }
+  // Оформление активных состояний селектов
 
-  // Активные состояния селектов
+  // Ховер фон
   .field--select:hover &::before {
     background-color: $color-gray-e5;
   }
 
+  // Нажато фон
   .field--select:active &::before {
     background-color: $color-gray-d6;
   }
 
-  // todo Дофига специфичности (?), но по другому не смог
-
-  .field--select:active .field__radio + &::after {
-    background-color: rgba($color-gray-33, 0.3);
+  // Чекед (радио)
+  .field__radio:checked + &::after {
+    background-color: $color-gray-33;
   }
 
-  // fill: #333, fill-opacity: 0.3
+  // Чекед (чекбокс)
+  .field__checkbox:checked + &::after {
+    background-color: $color-black;
+  }
+
+  // todo Якось дофига специфичности (?), но по другому не смог
+  // Нажато (радио и чекбокс)
+  .field--select:active .field__radio + &::after,
   .field--select:active .field__checkbox + &::after {
-    @include icon-tick("%23333", "0.3");
+    background-color: rgba($color-gray-33, 0.3);
   }
 
   & span {

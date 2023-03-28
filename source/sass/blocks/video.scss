@@ -1,0 +1,35 @@
+.video {
+  // @include outline(2px, solid, lightgreen);
+  max-width: 648px;
+  margin: 0 auto;
+  padding: 34px 0 49px;
+
+  @media (min-width: $width-tablet) {
+    width: calc(100vw - 2 * $width-tablet-padding);
+    max-width: 800px;
+    padding: 56px 0 43px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding: 60px 0 85px;
+  }
+}
+
+.video__content {
+  width: 100%;
+  position: relative;
+}
+
+.video__image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: $width-tablet) {
+    height: 500px;
+  }
+}
+
+.video__control {
+  margin: 0 auto;
+}
