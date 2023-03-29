@@ -571,6 +571,18 @@ img {
   color: #ffffff;
 }
 
+@media (min-width: 768px) {
+  .advantages__picture {
+    grid-column: 2/span 2;
+  }
+}
+@media (min-width: 768px) {
+  .advantages__picture--position-left {
+    grid-column: 1/span 2;
+    grid-row: 1;
+  }
+}
+
 .advantages__image {
   display: block;
   width: 100%;
@@ -580,13 +592,6 @@ img {
 @media (min-width: 768px) {
   .advantages__image {
     height: 256px;
-    grid-column: 2/span 2;
-  }
-}
-@media (min-width: 768px) {
-  .advantages__image--first {
-    grid-column: 1/span 2;
-    grid-row: 1;
   }
 }
 

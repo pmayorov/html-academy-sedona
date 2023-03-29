@@ -190,6 +190,20 @@
   }
 }
 
+.advantages__picture {
+
+  @media (min-width: $width-tablet) {
+      grid-column: 2 / span 2;
+    }
+
+  &--position-left {
+    @media (min-width: $width-tablet) {
+      grid-column: 1 / span 2;
+      grid-row: 1;
+    }
+  }
+}
+
 .advantages__image {
   display: block;
   width: 100%;
@@ -208,13 +222,6 @@
     // min-height: 256px;
     // height: 100%;
 
-    grid-column: 2 / span 2;
-  }
-
-  &--first {
-    @media (min-width: $width-tablet) {
-      grid-column: 1 / span 2;
-      grid-row: 1;
-    }
+    // grid-column: 2 / span 2;
   }
 }

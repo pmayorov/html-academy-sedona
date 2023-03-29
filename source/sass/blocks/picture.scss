@@ -1,5 +1,10 @@
-.picture {
+picture {
 
-  
+  .advantages__item--big & {
+    @media (min-width: $width-tablet) {
+      grid-column: 2/span 2;
+    }
+  }
+
 
 }

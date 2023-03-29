@@ -72,12 +72,14 @@
             <h3 class="advantages__title title">Настоящий городок</h3>
             <p class="advantages__desc">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="./img/index/index-desktop-01.webp 1x, ./img/index/index-desktop-01@2x.webp 2x">
-            <source type="image/webp" srcset="./img/index/index-mobile-01.webp 1x, ./img/index/index-mobile-01@2x.jpg 2x">
-            <source media="(min-width: 1200px)" srcset="./img/index/index-desktop-01.jpg 1x, ./img/index/index-desktop-01@2x.jpg 2x">
-            <img class="advantages__image" width="320" height="260" src="./img/index/index-mobile-01.jpg" srcset="./img/index/index-mobile-01@2x.jpg 2x" alt="Городской отель, на заднем фоне nкоторого виднеются горы">
-          </picture>
+          <div class="advantages__picture">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/index/index-desktop-01@1x.webp 1x, ./img/index/index-desktop-01@2x.webp 2x">
+              <source type="image/webp" srcset="./img/index/index-tablet-01@1x.webp 1x, ./img/index/index-tablet-01@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="./img/index/index-desktop-01.jpg@1x 1x, ./img/index/index-desktop-01@2x.jpg 2x">
+              <img class="advantages__image" width="320" height="260" src="./img/index/index-tablet-01@1x.jpg" srcset="./img/index/index-tablet-01@2x.jpg 2x" alt="Городской отель, на заднем фоне которого виднеются горы">
+            </picture>
+          </div>
 
           <!-- Список городских бонусов -->
           <article class="advantages__bonuses bonuses">
@@ -105,7 +107,15 @@
             <h3 class="advantages__title title">Там есть мост дьявола</h3>
             <p class="advantages__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-          <img class="advantages__image advantages__image--first" width="320" height="260" src="./img/index/index-mountains@1x.jpg" alt="Скалистые горы красного цвета и на переднем плане каньон с растущими в нем деревьями">
+          <div class="advantages__picture advantages__picture--position-left">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/index/index-desktop-02@1x.webp 1x, ./img/index/index-desktop-02@2x.webp 2x">
+              <source type="image/webp" srcset="./img/index/index-tablet-02@1x.webp 1x, ./img/index/index-tablet-02@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="./img/index/index-desktop-02@1x.jpg 1x, ./img/index/index-desktop-02@2x.jpg 2x">
+              <img class="advantages__image" width="320" height="260" src="./img/index/index-tablet-02@1x.jpg" srcset="./img/index/index-tablet-02@2x.jpg 2x" alt="Скалистые горы красного цвета и на переднем плане каньон с растущими в нем деревьями">
+              <!-- <img class="advantages__image advantages__image--position-first" width="320" height="260" src="./img/index/index-tablet-02@1x.jpg" srcset="./img/index/index-tablet-02@2x.jpg 2x" alt="Скалистые горы красного цвета и на переднем плане каньон с растущими в нем деревьями"> -->
+            </picture>
+          </div>
         </li>
 
         <!-- #3 -->
