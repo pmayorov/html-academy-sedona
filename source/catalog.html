@@ -68,7 +68,14 @@
 
         <!-- Фото #1 -->
         <li class="gallery__item gallery__item--big">
-          <img class="gallery__image" width="280" height="280" src="./img/catalog/catalog-1-mobile.jpg" alt="Неродные просторы">
+          <!-- <div class="gallery__picture"> -->
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/photo-01-desktop@1x.webp 1x, ./img/catalog/photo-01-desktop@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/photo-01-mobile@1x.webp 1x, ./img/catalog/photo-01-mobile@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="./img/catalog/photo-01-desktop@1x.jpg 1x, ./img/catalog/photo-01-desktop@2x.jpg 2x">
+            <img class="gallery__image" width="280" height="280" src="./img/catalog/photo-01-mobile@1x.jpg" srcset="./img/catalog/photo-01-mobile@2x.jpg 2x" alt="Неродные просторы">
+          </picture>
+          <!-- </div> -->
           <div class="gallery__desc">
             <p class="gallery__subtitle">Неродные просторы</p>
             <p class="gallery__author">Автор фото: Борис</p>
@@ -81,7 +88,10 @@
 
         <!-- Фото #2 -->
         <li class="gallery__item">
-          <img class="gallery__image" width="280" height="280" src="./img/catalog/catalog-2-mobile.jpg" alt="Местная растительность">
+          <picture>
+            <source type="image/webp" srcset="./img/catalog/photo-2@1x.webp 1x, ./img/catalog/photo-2@2x.webp 2x">
+            <img class="gallery__image" width="280" height="280" src="./img/catalog/photo-2@1x.jpg" srcset="./img/catalog/photo-2@2x.jpg 2x" alt="Местная растительность">
+          </picture>
           <div class="gallery__desc">
             <p class="gallery__subtitle">Местная растительность</p>
             <p class="gallery__author">Автор фото: Сергей</p>
@@ -94,7 +104,10 @@
 
         <!-- Фото #3 -->
         <li class="gallery__item">
-          <img class="gallery__image" width="280" height="280" src="./img/catalog/catalog-3-mobile.jpg" alt="Дорога на север">
+          <picture>
+            <source type="image/webp" srcset="./img/catalog/photo-3@1x.webp 1x, ./img/catalog/photo-3@2x.webp 2x">
+            <img class="gallery__image" width="280" height="280" src="./img/catalog/photo-3@1x.jpg" srcset="./img/catalog/photo-3@2x.jpg 2x" alt="Дорога на север">
+          </picture>
           <div class="gallery__desc">
             <p class="gallery__subtitle">Дорога на север</p>
             <p class="gallery__author">Автор фото: Петр</p>
@@ -107,7 +120,10 @@
 
         <!-- Фото #4 -->
         <li class="gallery__item">
-          <img class="gallery__image" width="280" height="280" src="./img/catalog/catalog-4-mobile.jpg" alt="Мост дьявола">
+          <picture>
+            <source type="image/webp" srcset="./img/catalog/photo-4@1x.webp 1x, ./img/catalog/photo-4@2x.webp 2x">
+            <img class="gallery__image" width="280" height="280" src="./img/catalog/photo-4@1x.jpg" srcset="./img/catalog/photo-4@2x.jpg 2x" alt="Мост дьявола">
+          </picture>
           <div class="gallery__desc">
             <p class="gallery__subtitle">Мост дьявола</p>
             <p class="gallery__author">Автор фото: Антон</p>
@@ -132,7 +148,10 @@
 
       <!-- Видеоконтент -->
       <div class="video__content">
-        <img class="video__image" width="320" height="201" src="./img/catalog/catalog-video-mobile.jpg" alt="Видеопрезентация">
+        <picture>
+          <source media="(min-width: 400px)" srcset="./img/catalog/video-desktop@1x.jpg 1x, ./img/catalog/video-desktop@2x.jpg 2x">
+          <img class="video__image" width="320" height="200" src="./img/catalog/video-mobile@1x.jpg" srcset="./img/catalog/video-mobile@1x.jpg 2x" alt="Видеопрезентация">
+        </picture>
         <!-- Видео контролы -->
         <div class="video__control control-panel">
           <div class="control-panel__volume-holder"><input class="control-panel__volume" type="range"></div>

@@ -1438,7 +1438,9 @@ img {
 }
 
 .gallery__image {
+  display: block;
   width: 100%;
+  min-height: 280px;
   max-height: 400px;
   object-fit: cover;
 }
