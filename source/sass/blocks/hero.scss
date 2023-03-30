@@ -1,47 +1,108 @@
 .hero {
   position: relative;
-  width: 100%;
   background-color: $color-basic;
+  background-repeat: no-repeat;
 
+  // Меняем фоны при смене вьюпорта и DPR
+  @media (max-width: $width-max-mobile) {
+    background-image: url("../img/index/hero-image-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/hero-image-mobile@2x.jpg");
+    }
+  }
+
+  @media (min-width: $width-tablet) {
+    background-image: url("../img/index/hero-image-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/hero-image-tablet@2x.jpg");
+    }
+  }
+
+  // Стили большой promo-секции
   &--big {
-    background:
-      url("../img/index/index-hero-big.svg") no-repeat,
-      url("../img/index/hero-mobile.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
 
     @media (max-width: $width-max-mobile) {
       height: 389px;
-      background-position: center 90px, center -40px;
     }
 
     @media (min-width: $width-tablet) {
       height: 518px;
-      background-size: 461px, auto;
-      background-position: center 78px, center;
     }
   }
 
+  // Стили малой promo-секции
   &--small {
-    background:
-      url("../img/index/index-hero-small.svg") no-repeat,
-      url("../img/index/hero-mobile.jpg") no-repeat;
+    background-position: center bottom;
+
+    // Чтобы изображение более высокого разрешения не растягивалось в контейнере
+    // или не масштабировалось во время изменения ширины вьюпорта при установленном background-size: content,
+    // задаем ему фиксированную контентную ширину (background-size: ширина контента).
 
     @media (max-width: $width-max-mobile) {
       height: 158px;
-      background-size: 229px, auto;
-      background-position: center, center -290px;
+      // Фиксируем ширину размером планшетного контента
+      background-size: 768px auto;
     }
 
     @media (min-width: $width-tablet) {
       height: 290px;
-      background-size: 457px, auto;
-      background-position: center 95px, center bottom;
+      // Фиксируем ширину размером десктопного контента
+      background-size: 1200px auto;
     }
 
     @media (min-width: $width-pre-desktop) {
       height: 301px;
-      background-position: center 100px, center bottom;
     }
   }
+
+  //* Векторная промо-надпись
+
+  // Поскольку нижнее растровое фото меняется в зависимости от вьюпорта и "ретинистости" :) экрана
+  // то чтобы вместе с этими изменениями не дублировать векторную составляющую hero-раздела
+  // решил спозиционировать векторную надпись как псевдоэлемент.
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
+
+  &--big::before {
+    background-image: url("../img/index/index-hero-big.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $width-tablet) {
+      background-size: 461px, auto;
+    }
+
+    @media (min-width: $width-tablet) {
+      background-position: center 77px;
+    }
+  }
+
+  &--small::before {
+    background-image: url("../../img/index/index-hero-small.svg");
+    background-repeat: no-repeat;
+    background-size: 229px auto;
+    background-position: center 52px;
+
+    @media (min-width: $width-tablet) {
+      background-size: auto;
+      background-position: center 95px;
+    }
+
+    @media (min-width: $width-pre-desktop) {
+      background-position: center 102px;
+    }
+  }
+
+  // Полигональный элемент под промо-секцией
 
   &::after {
     position: absolute;
@@ -50,7 +111,7 @@
     right: 0;
     bottom: 0;
     height: 57px;
-    background: url("../img/index/bottom-polygon.svg") no-repeat center;
+    background: url("../img/index/bottom-polygon.svg") center no-repeat;
     background-size: cover;
   }
 }
