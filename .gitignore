@@ -7,7 +7,9 @@
 *.zip
 *.rar
 *.sublime*
-node_modules/
+*.min.*
 npm-debug.*
+node_modules/
+build
 Thumbs.db
 /###

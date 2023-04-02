@@ -49,6 +49,7 @@
 .bonuses__title {
   position: relative;
   margin: 0 0 16px;
+  word-break: break-word;
 
   @media (min-width: $width-tablet) {
     margin: 0 0 22px;
