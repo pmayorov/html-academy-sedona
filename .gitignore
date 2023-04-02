@@ -7,7 +7,6 @@
 *.zip
 *.rar
 *.sublime*
-*.min.*
 npm-debug.*
 node_modules/
 build
