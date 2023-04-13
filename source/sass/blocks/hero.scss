@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
 
   // Меняем фоны при смене вьюпорта и DPR
+
   @media (max-width: $width-max-mobile) {
     background-image: url("../img/index/hero-image-mobile@1x.jpg");
 
